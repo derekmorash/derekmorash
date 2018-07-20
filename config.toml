@@ -1,0 +1,4 @@
+baseURL = "https://derekmorash.com/"
+languageCode = "en-us"
+title = "Derek Morash"
+assetDir = 'assets'

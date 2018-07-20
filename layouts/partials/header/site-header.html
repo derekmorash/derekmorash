@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+  {{ partial "head/meta.html" . }}
+  <title>{{ .Page.Title }}</title>
+  {{ $css := resources.Get "css/style.css" }}
+  {{ $style := $css | resources.Minify }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
+</head>
+
+<body>
+  <header role="banner" class="site-header">
+    <h1 class="logo"><a href="/">Derek Morash</a></h1>
+
+    <nav role="navigation" id="site-navigation" class="site-navigation">
+      <ul>
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+          {{ if .HasChildren }}
+            <li class="{{ if $currentPage.HasMenuCurrent " main " . }}active{{ end }}">
+              <a href="#">
+                {{ .Pre }}
+                <span>{{ .Name }}</span>
+              </a>
+              <ul class="sub-menu">
+                {{ range .Children }}
+                <li class="{{ if $currentPage.IsMenuCurrent " main " . }}active{{ end }}">
+                  <a href="{{ .URL }}">{{ .Name }}</a>
+                </li>
+                {{ end }}
+              </ul>
+            </li>
+          {{ else }}
+            <li>
+              <a href="{{ .URL }}">
+                {{ .Pre }}
+                <span>{{ .Name }}</span>
+              </a>
+            </li>
+          {{ end }}
+        {{ end }}
+        <li>
+          <a href="#" target="_blank">Hardcoded Link 1</a>
+        </li>
+        <li>
+          <a href="#" target="_blank">Hardcoded Link 2</a>
+        </li>
+      </ul>
+    </nav>
+  </header>

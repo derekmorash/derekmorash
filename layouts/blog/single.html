@@ -1,0 +1,16 @@
+{{ partial "header/site-header.html" . }}
+ 
+<main class="site-main">
+  <article role="main" class="blog-post">
+    <header class="blog-post_header">
+      <h1>{{ .Page.Title }}</h1>
+
+      {{ $date := time (.Page.Date) }}
+      <aside class="postmetadata">Posted on <time datetime="{{ $date }}">{{ $date }}</time></aside>
+    </header>
+
+    {{ .Content }}
+  </article>
+</main>
+ 
+{{ partial "footer/site-footer.html" . }}

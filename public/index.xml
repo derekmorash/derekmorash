@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Derek Morash</title>
+    <link>https://derekmorash.com/</link>
+    <description>Recent content in Home on Derek Morash</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 18 Jul 2018 00:00:00 -0300</lastBuildDate>
+    
+	<atom:link href="https://derekmorash.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Derek Morash</title>
+      <link>https://derekmorash.com/about/</link>
+      <pubDate>Wed, 18 Jul 2018 00:00:00 -0300</pubDate>
+      
+      <guid>https://derekmorash.com/about/</guid>
+      <description>It me.</description>
+    </item>
+    
+    <item>
+      <title>HTML5 Canvas Tag Intro</title>
+      <link>https://derekmorash.com/blog/intro-to-canvas/</link>
+      <pubDate>Wed, 20 Jan 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://derekmorash.com/blog/intro-to-canvas/</guid>
+      <description>This is a walk through/tutorial on the basics of the HTML5 Canvas Tag. We will start by creating some simple shapes and then move on to some animation. To download the code and follow along you can check out the github repo here.
+Canvas Setup Start with a basic HTML5 document, in the body add your &amp;lt;canvas&amp;gt; tag. The tag will need at least three things; an id, a width, and a height.</description>
+    </item>
+    
+  </channel>
+</rss>
