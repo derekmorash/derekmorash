@@ -12,9 +12,9 @@
     
     
     <item>
-      <title>Derek Morash</title>
+      <title>About</title>
       <link>https://derekmorash.com/about/</link>
-      <pubDate>Wed, 18 Jul 2018 00:00:00 -0300</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://derekmorash.com/about/</guid>
       <description>It me.</description>
@@ -23,7 +23,7 @@
     <item>
       <title>HTML5 Canvas Tag Intro</title>
       <link>https://derekmorash.com/blog/intro-to-canvas/</link>
-      <pubDate>Wed, 20 Jan 2016 00:00:00 -0400</pubDate>
+      <pubDate>Wed, 20 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://derekmorash.com/blog/intro-to-canvas/</guid>
       <description>This is a walk through/tutorial on the basics of the HTML5 Canvas Tag. We will start by creating some simple shapes and then move on to some animation. To download the code and follow along you can check out the github repo here.

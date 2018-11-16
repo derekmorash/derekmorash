@@ -1,9 +1,9 @@
-+++
-type = "blog"
-description = "This is a walk through/tutorial on the basics of the HTML5 Canvas Tag."
-title = "HTML5 Canvas Tag Intro"
-date = "2016-01-20"
-+++
+---
+type: "blog"
+description: "This is a walk through/tutorial on the basics of the HTML5 Canvas Tag."
+title: "HTML5 Canvas Tag Intro"
+date: "2016-01-20"
+---
 This is a walk through/tutorial on the basics of the HTML5 Canvas Tag. We will start by creating some simple shapes and then move on to some animation. To download the code and follow along you can check out the <a href="https://github.com/derekmorash/SchoolWork/tree/master/HTMLCanvasProject" >github repo here</a>.
 
 ### Canvas Setup
