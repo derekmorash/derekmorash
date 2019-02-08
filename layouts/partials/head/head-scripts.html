@@ -1,0 +1,10 @@
+{{ $criticalScripts := resources.Get "js/head-scripts.js" | resources.Minify }}
+<script>
+  {{ $criticalScripts.Content | safeJS }}
+</script>
+
+{{ $vendor := resources.Get "js/vendor/fontfaceobserver.standalone.js" }}
+{{ $utils := resources.Get "js/utils/utils.js" }}
+{{ $main := resources.Get "js/main.js" }}
+{{ $js := slice $vendor $utils $main | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $js.Permalink }}"></script>

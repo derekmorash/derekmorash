@@ -1,37 +1,11 @@
-<html lang="en">
+<html lang="en" class="no-js">
 
 <head>
   {{ partial "head/meta.html" . }}
   <title>{{ .Page.Title }}</title>
 
-  <!-- {{ $css := resources.Get "css/style.css" }}
-  {{ $style := $css | resources.Minify }}
-  <link rel="stylesheet" href="{{ $style.Permalink }}"> -->
-
-  {{ $critical := resources.Get "sass/critical.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint  }}
-
-  {{ $InterRegularWoff2 := resources.Get "fonts/Inter-Regular.woff2" | resources.Fingerprint }}
-  {{ $InterRegularWoff := resources.Get "fonts/Inter-Regular.woff" | resources.Fingerprint }}
-  {{ $InterSemiBoldWoff2 := resources.Get "fonts/Inter-SemiBold.woff2" | resources.Fingerprint }}
-  {{ $InterSemiBoldWoff := resources.Get "fonts/Inter-SemiBold.woff" | resources.Fingerprint }}
-  <style>
-    @font-face {
-      font-family: 'Inter';
-      font-style:  normal;
-      font-weight: 400;
-      src: url("{{ $InterRegularWoff2.Permalink }}") format("woff2"),
-          url("{{ $InterRegularWoff2.Permalink }}") format("woff");
-    }
-    @font-face {
-      font-family: 'Inter';
-      font-style:  normal;
-      font-weight: 600;
-      src: url("{{ $InterSemiBoldWoff2.Permalink }}") format("woff2"),
-          url("{{ $InterSemiBoldWoff.Permalink }}") format("woff");
-    }
-
-    {{ $critical.Content | safeCSS }}
-  </style>
+  {{ partial "head/head-scripts.html" . }}
+  {{ partial "head/critical-css.html" . }}
 
   {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
   <link rel="stylesheet" href="{{ $style.Permalink }}" integrity=”{{ $style.Data.Integrity }}”>
@@ -45,35 +19,13 @@
       <ul>
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
-          {{ if .HasChildren }}
-            <li class="{{ if $currentPage.HasMenuCurrent " main " . }}active{{ end }}">
-              <a href="#">
-                {{ .Pre }}
-                <span>{{ .Name }}</span>
-              </a>
-              <ul class="sub-menu">
-                {{ range .Children }}
-                <li class="{{ if $currentPage.IsMenuCurrent " main " . }}active{{ end }}">
-                  <a href="{{ .URL }}">{{ .Name }}</a>
-                </li>
-                {{ end }}
-              </ul>
-            </li>
-          {{ else }}
-            <li>
-              <a href="{{ .URL }}">
-                {{ .Pre }}
-                <span>{{ .Name }}</span>
-              </a>
-            </li>
-          {{ end }}
+          <li>
+            <a href="{{ .URL }}">
+              {{ .Pre }}
+              <span>{{ .Name }}</span>
+            </a>
+          </li>
         {{ end }}
-        <li>
-          <a href="#" target="_blank">Hardcoded Link 1</a>
-        </li>
-        <li>
-          <a href="#" target="_blank">Hardcoded Link 2</a>
-        </li>
       </ul>
     </nav>
   </header>
