@@ -1,0 +1,46 @@
+// Theme Colours
+// =============
+$c-primary: #70D0E3;
+$c-primary-light: lighten($c-primary, 10%);
+$c-primary-dark: darken($c-primary, 10%);
+
+$c-secondary: #a2e4b8;
+$c-secondary-light: lighten($c-secondary, 10%);
+$c-secondary-dark: darken($c-secondary, 10%);
+
+$c-tertiary: #e4a2e5;
+$c-tertiary-light: lighten($c-tertiary, 10%);
+$c-tertiary-dark: darken($c-tertiary, 10%);
+
+// Shades
+// ======
+$c-white: #FFF;
+$c-black: #000;
+
+$c-grey-100: #F6F6F6;
+$c-grey-200: #E0E0E0;
+$c-grey-300: #C3C3C3;
+$c-grey-400: #A6A6A6;
+$c-grey-500: #909090;
+$c-grey-600: #737373;
+$c-grey-700: #565656;
+$c-grey-800: #404040;
+$c-grey-900: #262626;
+$c-grey-1000: #101010;
+
+// Text
+// ========
+$c-text: $c-grey-900;
+$c-heading: $c-black;
+$c-link: $c-primary;
+
+// Fonts
+// =====
+$f-primary-fallback: Helvetica, Arial, Verdana, sans-serif;
+$f-primary: 'Inter', #{$f-primary-fallback};
+$f-weight-primary-regular: 400;
+$f-weight-primary-bold: 600;
+
+// ::-moz-selection { background: $c-primary; color: $c-white; text-shadow: none; }
+// ::selection { background: $c-primary; color: $c-white; text-shadow: none; }
+

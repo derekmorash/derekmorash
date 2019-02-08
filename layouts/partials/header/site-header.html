@@ -3,9 +3,38 @@
 <head>
   {{ partial "head/meta.html" . }}
   <title>{{ .Page.Title }}</title>
-  {{ $css := resources.Get "css/style.css" }}
+
+  <!-- {{ $css := resources.Get "css/style.css" }}
   {{ $style := $css | resources.Minify }}
-  <link rel="stylesheet" href="{{ $style.Permalink }}">
+  <link rel="stylesheet" href="{{ $style.Permalink }}"> -->
+
+  {{ $critical := resources.Get "sass/critical.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint  }}
+
+  {{ $InterRegularWoff2 := resources.Get "fonts/Inter-Regular.woff2" | resources.Fingerprint }}
+  {{ $InterRegularWoff := resources.Get "fonts/Inter-Regular.woff" | resources.Fingerprint }}
+  {{ $InterSemiBoldWoff2 := resources.Get "fonts/Inter-SemiBold.woff2" | resources.Fingerprint }}
+  {{ $InterSemiBoldWoff := resources.Get "fonts/Inter-SemiBold.woff" | resources.Fingerprint }}
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      font-style:  normal;
+      font-weight: 400;
+      src: url("{{ $InterRegularWoff2.Permalink }}") format("woff2"),
+          url("{{ $InterRegularWoff2.Permalink }}") format("woff");
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style:  normal;
+      font-weight: 600;
+      src: url("{{ $InterSemiBoldWoff2.Permalink }}") format("woff2"),
+          url("{{ $InterSemiBoldWoff.Permalink }}") format("woff");
+    }
+
+    {{ $critical.Content | safeCSS }}
+  </style>
+
+  {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}" integrity=”{{ $style.Data.Integrity }}”>
 </head>
 
 <body>

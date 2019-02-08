@@ -4,8 +4,6 @@ date: 2018-11-15T23:53:34-04:00
 # draft: true
 ---
 
-# Handle Shopify Mandatory Webhooks in Ruby on Rails
-
 Since May 25th, 2018 GDPR has imposed obligations on any party that collects, stores, or processes personal data. App developers have the responsibility to comply with these regulations. Fortunately, Shopify has implemented endpoints to help app developers deal with data privacy to meet the requirements of GDPR.
 
 Read about [Shopify API GDPR requirements](https://help.shopify.com/en/api/guides/gdpr-resources).
@@ -95,7 +93,7 @@ end
 
 We then have to go into our apps set up in the partners dashboard and find the mandatory webhooks section. Here we specify the URLs for each webhook endpoint.
 
-![Shopify app set up mandatory webhooks](assets/mandatory-webhooks.png)
+![Shopify app set up mandatory webhooks](/blog/handle-shopify-mandatory-webhooks/mandatory-webhooks.png)
 
 Shopify can now send a mandatory webhook to our app and we will verify it and respond accordingly.
 

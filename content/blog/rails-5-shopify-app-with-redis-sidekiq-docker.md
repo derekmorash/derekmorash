@@ -3,7 +3,6 @@ title: "Rails 5 Shopify App With Redis Sidekiq Docker"
 date: 2018-11-15T23:51:24-04:00
 # draft: true
 ---
-# How to create a new Rails 5 Shopify app with Redis and Sidekiq in Docker
 
 ## Goals
 
@@ -169,7 +168,7 @@ Be sure to change `app_name` to your apps name.
 
     If you haven't already reserved a subdomain then create a new one on that same page.
 
-    ![Reserve ngrok subdomain](assets/reserve-subdomain.png)
+    ![Reserve ngrok subdomain](/blog/rails-5-shopify-app-with-redis-sidekiq-docker/reserve-subdomain.png)
 
     In your terminal run:
     
@@ -195,7 +194,7 @@ Log into your Shopify Partners dashboard to create a new app. Click here to [bec
 
 Find the apps link in the dashboard on the left then click create app. You'll get a popup like this.
 
-![Create app prompt for shopify dashboard](assets/shopify-dashboard.png)
+![Create app prompt for shopify dashboard](/blog/rails-5-shopify-app-with-redis-sidekiq-docker/shopify-dashboard-create-app.png)
 
 Here you will give the app a name, and the URL for your new local app. The URL is the forwarding address that was created in the previous step by ngrok.
 
@@ -289,7 +288,7 @@ Now that everything is configured we can build our containers and get them up an
 
 With ngrok running and all containers up you should be able to open the ngrok forwarding URL in a browser and see the _"Yay! You're on Rails!"_ screen.
 
-![You're on Rails!](assets/welcome-to-rails.png)
+![You're on Rails!](/blog/rails-5-shopify-app-with-redis-sidekiq-docker/welcome-to-rails.jpg)
 
 ## 7. Shopify app gem setup
 
@@ -330,7 +329,7 @@ There are just a few things left to do to turn our Rails app into a Shopify app.
 
 With ngrok running and all containers up you should be able to open the ngrok forwarding URL in a browser and see the shopify app install screen.
 
-![App install screen](assets/app-install.png)
+![App install screen](/blog/rails-5-shopify-app-with-redis-sidekiq-docker/app-install.png)
 
 
 ## Helpful commands

@@ -4,6 +4,5 @@ type = "static"
 title = "About"
 description = "About"
 menu = "main"
-weight = "2"
 +++
 It me.
