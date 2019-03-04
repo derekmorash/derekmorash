@@ -24,7 +24,8 @@ body {
   font-family: $f-primary;
   font-weight: $f-weight-primary-regular;
   font-style: normal;
-  line-height: 1;
+  letter-spacing: 0.002em;
+  line-height: 1.38;
   background: $c-grey-100;
   color: $c-text;
 
@@ -42,6 +43,12 @@ em {
   font-style: italic;
 }
 
+strong {
+  font-weight: $f-weight-primary-bold;
+  font-style: normal;
+  color: $c-black;
+}
+
 a {
   color: $c-link;
   text-decoration: none;
@@ -57,40 +64,36 @@ h2,
 h3,
 h4,
 h5,
-h6, {
+h6 {
   margin: 1rem 0 0.5rem 0;
   font-weight: $f-weight-primary-bold;
   font-style: normal;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
   color: $c-heading;
 }
 
-h1,
-.h1 {
+h1 {
   font-size: 1.75rem;
 }
 
-h2,
-.h2 {
+h2 {
   font-size: 1.5rem;
 }
 
-h3,
-.h3 {
+h3 {
   font-size: 1.25rem;
 }
 
-h4,
-.h4 {
+h4 {
   font-size: 1.125rem;
 }
 
-h5,
-.h5 {
+h5 {
   font-size: 1rem;
 }
 
-h6,
-.h6 {
+h6 {
   font-size: 1rem;
 }
 
@@ -105,4 +108,12 @@ h5+h6 {
 img {
 	max-width: 100%;
 	height: auto;
+}
+
+pre {
+  overflow: scroll;
+}
+
+figure {
+  margin: 1rem 0;
 }

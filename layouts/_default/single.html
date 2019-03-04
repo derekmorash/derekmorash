@@ -2,14 +2,24 @@
  
 <main class="site-main">
   <article role="main" class="blog-post">
-    <header class="blog-post_header">
+    <header class="blog-post__header">
       <h1>{{ .Page.Title }}</h1>
 
       {{ $date := time (.Page.Date) }}
       <aside class="postmetadata">Posted on <time datetime="{{ $date }}">{{ $date }}</time></aside>
     </header>
 
-    {{ .Content }}
+    <section class="blog-post__content">
+      {{ $reAltIn := "<p><img src=\"([^\"]+)\" alt=\"([^\"]+)\" /></p>" }}
+      {{ $reAltOut := "<figure><img src=\"$1\" alt=\"$2\"><figcaption>$2</figcaption></figure>" }}
+      {{ $altContent := .Content | replaceRE $reAltIn $reAltOut | safeHTML }}
+
+      {{ $reAltTitleIn := "<p><img src=\"([^\"]+)\" alt=\"([^\"]+)\" title=\"([^\"]+)\" /></p>" }}
+      {{ $reAltTitleOut := "<figure><img src=\"$1\" alt=\"$2\" title=\"$3\"><figcaption>$2</figcaption></figure>" }}
+      {{ $finalContent := $altContent | replaceRE $reAltTitleIn $reAltTitleOut | safeHTML }}
+
+      {{ $finalContent }}
+    </section>
   </article>
 </main>
  
