@@ -13,19 +13,18 @@
 
 <body>
   <header role="banner" class="site-header">
-    <h1 class="logo"><a href="/">Derek Morash</a></h1>
+    <div class="site-header__inner">
+      <h1 class="logo"><a href="/">Derek Morash</a></h1>
 
-    <nav role="navigation" id="site-navigation" class="site-navigation">
-      <ul>
-        {{ $currentPage := . }}
-        {{ range .Site.Menus.main }}
-          <li>
-            <a href="{{ .URL }}">
-              {{ .Pre }}
-              <span>{{ .Name }}</span>
-            </a>
-          </li>
-        {{ end }}
-      </ul>
-    </nav>
+      <nav role="navigation" id="site-navigation" class="site-navigation">
+        <ul>
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
+            <li>
+              <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      </nav>
+    </div>
   </header>

@@ -50,12 +50,15 @@ strong {
 }
 
 a {
-  color: $c-link;
-  text-decoration: none;
+  color: $c-text;
+  text-decoration: underline;
+  text-decoration-skip: objects;
+  text-decoration-color: $c-link;
+  transition: color 0.05s;
 
   &:hover,
   &:hover:visited {
-    color: darken($c-link, 10%);
+    color: $c-link;
   }
 }
 
