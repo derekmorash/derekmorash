@@ -93,7 +93,7 @@ end
 
 We then have to go into our apps set up in the partners dashboard and find the mandatory webhooks section. Here we specify the URLs for each webhook endpoint.
 
-![Shopify app set up mandatory webhooks](/blog/handle-shopify-mandatory-webhooks/mandatory-webhooks.png)
+{{< figure src="/blog/handle-shopify-mandatory-webhooks/mandatory-webhooks.png" attr="Shopify app set up mandatory webhooks" >}}
 
 Shopify can now send a mandatory webhook to our app and we will verify it and respond accordingly.
 
