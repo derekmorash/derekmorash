@@ -1,11 +1,13 @@
 {{ $critical := resources.Get "sass/critical.scss" | resources.ToCSS | resources.Minify }}
 
-{{ $InterRegularWoff2 := resources.Get "fonts/Inter-Regular.woff2" | resources.Fingerprint }}
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif|Nunito:600" rel="stylesheet">
+
+<!-- {{ $InterRegularWoff2 := resources.Get "fonts/Inter-Regular.woff2" | resources.Fingerprint }}
 {{ $InterRegularWoff := resources.Get "fonts/Inter-Regular.woff" | resources.Fingerprint }}
 {{ $InterSemiBoldWoff2 := resources.Get "fonts/Inter-SemiBold.woff2" | resources.Fingerprint }}
-{{ $InterSemiBoldWoff := resources.Get "fonts/Inter-SemiBold.woff" | resources.Fingerprint }}
+{{ $InterSemiBoldWoff := resources.Get "fonts/Inter-SemiBold.woff" | resources.Fingerprint }} -->
 <style>
-  @font-face {
+  /* @font-face {
     font-family: 'Inter';
     font-style:  normal;
     font-weight: 400;
@@ -18,7 +20,7 @@
     font-weight: 600;
     src: url("{{ $InterSemiBoldWoff2.Permalink }}") format("woff2"),
         url("{{ $InterSemiBoldWoff.Permalink }}") format("woff");
-  }
+  } */
 
   {{ $critical.Content | safeCSS }}
 </style>

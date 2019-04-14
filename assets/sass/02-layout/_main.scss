@@ -1,0 +1,11 @@
+.site-main {
+  max-width: none;
+  padding: 0 1.25rem;
+  
+  @media (min-width: 600px) {
+    padding: 0 1.5rem;
+  }
+  @media (min-width: 1200px) {
+    padding: 0 2rem;
+  }
+}

@@ -3,10 +3,14 @@
 <main class="site-main">
   <article role="main" class="blog-post">
     <header class="blog-post__header">
+
+
       <h1>{{ .Page.Title }}</h1>
 
-      {{ $date := time (.Page.Date) }}
-      <aside class="postmetadata">Posted on <time datetime="{{ $date }}">{{ $date }}</time></aside>
+      <aside class="blog-post__metadata">
+        <!-- <p class="blog-post__reading-time">Estimated reading time <span>{{ .Page.ReadingTime }} minutes</span></p> -->
+        <p class="blog-post__date">Posted on <time datetime="{{ .PublishDate.Format "2006-01-02" }}">{{ .PublishDate.Format "January 2, 2006" }}</time></p>
+      </aside>
     </header>
 
     <section class="blog-post__content rte">

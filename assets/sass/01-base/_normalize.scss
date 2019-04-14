@@ -43,15 +43,6 @@ summary { /* 1 */
   display: block;
 }
 
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-
-progress {
-  vertical-align: baseline;
-}
-
 /**
  * Add the correct display in IE 10-.
  * 1. Add the correct display in IE.
@@ -87,24 +78,6 @@ a:hover {
 
 /* Text-level semantics
    ========================================================================== */
-
-
-/**
- * Add the correct font style in Android 4.3-.
- */
-
-dfn {
-  font-style: italic;
-}
-
-/**
- * Add the correct background and color in IE 9-.
- */
-
-mark {
-  background-color: #ff0;
-  color: #000;
-}
 
 /**
  * Add the correct font size in all browsers.
@@ -221,9 +194,9 @@ button:-moz-focusring,
  */
 
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /**

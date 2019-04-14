@@ -1,16 +1,32 @@
 (function() {
   var docElement = document.documentElement;
 
-  // check if 'Inter' has already been downloaded
-  if (docElement.className.indexOf('inter-loaded') < 0 || !derek.utils.getCookie('inter-loaded')) {
-    console.log('Load Inter');
-    // create a new FontFaceObserver to watch for 'Inter' to download
-    var fontInter = new FontFaceObserver('Inter');
+  // check if 'Noto Serif' has already been downloaded
+  if (docElement.className.indexOf('noto-serif-loaded') < 0 || !derek.utils.getCookie('noto-serif-loaded')) {
+    console.log('Load Noto Serif');
+    // create a new FontFaceObserver to watch for 'Noto Serif' to download
+    var fontNotoSerif = new FontFaceObserver('Noto Serif');
 
-    fontInter.load().then(function() {
-      docElement.className += " inter-loaded";
+    fontNotoSerif.load().then(function() {
+      docElement.className += " noto-serif-loaded";
       derek.utils.setCookie({
-        name: 'inter-loaded',
+        name: 'noto-serif-loaded',
+        value: true,
+        expires: 30
+      });
+    });
+  }
+
+  // check if 'Nunito' has already been downloaded
+  if (docElement.className.indexOf('nunito-loaded') < 0 || !derek.utils.getCookie('nunito-loaded')) {
+    console.log('Load Nunito');
+    // create a new FontFaceObserver to watch for 'Nunito' to download
+    var fontNunito = new FontFaceObserver('Nunito');
+
+    fontNunito.load().then(function() {
+      docElement.className += " nunito-loaded";
+      derek.utils.setCookie({
+        name: 'nunito-loaded',
         value: true,
         expires: 30
       });

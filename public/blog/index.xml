@@ -12,6 +12,60 @@
     
     
     <item>
+      <title>Handle Shopify Webhooks in Ruby on Rails</title>
+      <link>https://derekmorash.com/blog/shopify-webhooks-ruby-on-rails/</link>
+      <pubDate>Tue, 27 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://derekmorash.com/blog/shopify-webhooks-ruby-on-rails/</guid>
+      <description>Webhooks are a way for Shopify to send data to your app when events in a merchants store happen, such as order or product updates. The ShopifyApp gem makes it easy to subscribe to and manage the webhooks that are required for your app. We&amp;rsquo;ll look at two ways of handling webhooks using the ShopifyApp gem in Ruby on Rails.
+Note about Mandatory Webhooks:
+If you&amp;rsquo;re using the shopify_app gem you can use the webhooks manager to configure the webhooks our app needs.</description>
+    </item>
+    
+    <item>
+      <title>Handle Shopify Mandatory Webhooks in Ruby on Rails</title>
+      <link>https://derekmorash.com/blog/handle-shopify-mandatory-webhooks-in-ruby-on-rails/</link>
+      <pubDate>Thu, 15 Nov 2018 23:53:34 -0400</pubDate>
+      
+      <guid>https://derekmorash.com/blog/handle-shopify-mandatory-webhooks-in-ruby-on-rails/</guid>
+      <description>Since May 25th, 2018 GDPR has imposed obligations on any party that collects, stores, or processes personal data. App developers have the responsibility to comply with these regulations. Fortunately, Shopify has implemented endpoints to help app developers deal with data privacy to meet the requirements of GDPR.
+Read about Shopify API GDPR requirements.
+Mandatory Webhooks Mandatory webhooks differ slightly from regular webhooks from Shopify. If you&amp;rsquo;re using the shopify_app gem you can use the webhooks manager to configure your apps needed webhooks.</description>
+    </item>
+    
+    <item>
+      <title>Rails 5 Shopify App With Redis Sidekiq Docker</title>
+      <link>https://derekmorash.com/blog/rails-5-shopify-app-with-redis-sidekiq-docker/</link>
+      <pubDate>Thu, 15 Nov 2018 23:51:24 -0400</pubDate>
+      
+      <guid>https://derekmorash.com/blog/rails-5-shopify-app-with-redis-sidekiq-docker/</guid>
+      <description>Goals  Create a new Rails 5 app Use the shopify_app gem for app architecture and API access Redis and Sidekiq for jobs Develop locally with the app contained in Docker  Prerequisites  Experience with Ruby and Rails Updated versions of Ruby, Rails, and Docker.
+ Install Ruby On Rails Get started with Docker   Docker experience
+ ngrok account created and installed. Get started with ngrok</description>
+    </item>
+    
+    <item>
+      <title>Javascript JSON Search</title>
+      <link>https://derekmorash.com/blog/javascript-json-search/</link>
+      <pubDate>Sun, 08 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://derekmorash.com/blog/javascript-json-search/</guid>
+      <description>A quick tutorial on how to load JSON data with Ajax and query it with a search string. To see a demo and the working code checkout this codepen. It was a Javascript challenge exercise by Wes Bos, I wrote the Javascript.
+This is what it looks like completed. A list of results appear that match the search query.
+First we&amp;rsquo;ll set up our HTML, it&amp;rsquo;s super simple. We&amp;rsquo;ll need an input text box to type our search query into, and an unordered list to display the matched results.</description>
+    </item>
+    
+    <item>
+      <title>HTML5 Canvas Tag Intro</title>
+      <link>https://derekmorash.com/blog/html5-canvas-tag-intro/</link>
+      <pubDate>Wed, 20 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://derekmorash.com/blog/html5-canvas-tag-intro/</guid>
+      <description>This is a walk through/tutorial on the basics of the HTML5 Canvas Tag. We will start by creating some simple shapes and then move on to some animation. To download the code and follow along you can check out the github repo here.
+###Canvas Setup Start with a basic HTML5 document, in the body add your &amp;lt;canvas&amp;gt; tag. The tag will need at least three things; an id, a width, and a height.</description>
+    </item>
+    
+    <item>
       <title>HTML5 Canvas Tag Intro</title>
       <link>https://derekmorash.com/blog/intro-to-canvas/</link>
       <pubDate>Wed, 20 Jan 2016 00:00:00 +0000</pubDate>

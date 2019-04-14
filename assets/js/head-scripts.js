@@ -32,7 +32,11 @@
     return cookie_value;
   }
 
-  if (getCookieValue('inter-loaded')) {
-    docElement.className += " inter-loaded";
+  if (getCookieValue('noto-serif-loaded')) {
+    docElement.className += " noto-serif-loaded";
+  }
+
+  if (getCookieValue('nunito-loaded')) {
+    docElement.className += " nunito-loaded";
   }
 })();

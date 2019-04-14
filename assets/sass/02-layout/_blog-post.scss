@@ -1,63 +1,65 @@
 .blog-post {
+  display: block;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  
-  @media (min-width: 600px) {
-    padding: 0 1.5rem;
-  }
-  @media (min-width: 900px) {
-    padding: 0 2rem;
+
+  @media (min-width: 1200px) {
   }
 }
 
 .blog-post__header {
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: 2rem 0;
+  text-align: center;
+  font-family: $f-secondary-fallback;
+  font-weight: $f-weight-secondary-regular;
 
+  html.nunito-loaded & {
+    font-family: $f-secondary;
+  }
+
+  h1 {
+    margin: 1rem 0;
+    font-size: 1.75rem;
+    line-height: 1.1;
+  }
+
+  @media (min-width: 900px) {
+    padding: 3rem 0;
+
+    h1 {
+      font-size: 2.25rem;
+    }
+  }
+}
+
+.blog-post__metadata {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  color: $c-primary;
+  font-size: 0.75rem;
+}
+
+// .blog-post__reading-time {
+//   margin: 0;
+//   padding: 0 1rem;
+
+//   span {
+//     display: block;
+//   }
+// }
+
+.blog-post__date {
+  margin: 0;
+  padding: 0 1rem;
+
+  time {
+    display: block;
+  }
 }
 
 .blog-post__content {
-  max-width: 600px;
+  max-width: 36rem;
   margin: 0 auto;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-top: 2rem;
-
-    &:before {
-      content: '';
-      display: inline-block;
-      width: 1rem;
-      height: 3px;
-      margin-right: 0.25rem;
-      border-radius: 5px;
-      background-color: $c-link;
-    }
-  }
-
-  > figure {
-    display: block;
-    width: 100%;
-    max-width: none;
-    margin: 2rem 0;
-
-    img {
-      margin: 0 auto;
-    }
-
-    figcaption {
-      margin-top: 0.5rem;
-      font-size: 0.75rem;
-      font-style: italic;
-      color: $c-grey-600;
-    }
-  }
-
-  > img {
-    text-align: left;
-  }
 }
