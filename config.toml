@@ -1,5 +1,7 @@
 baseURL = "https://derekmorash.com/"
 languageCode = "en-us"
 title = "Derek Morash"
+description = "Derek Morash is a software developer"
 assetDir = 'assets'
 pygmentsCodeFences = true
+summaryLength = 20

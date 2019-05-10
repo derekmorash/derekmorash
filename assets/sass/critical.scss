@@ -1,6 +1,6 @@
+@import '01-base/variables';
 @import '01-base/mixins';
 @import '01-base/normalize';
-@import '01-base/variables';
 
 html {
   box-sizing: border-box;
@@ -75,18 +75,11 @@ h3,
 h4,
 h5,
 h6 {
+  @extend .nunito;
   margin: 2.5em 0 0.75rem;
-  font-family: $f-secondary-fallback;
-  font-weight: $f-weight-secondary-regular;
-  // font-weight: $f-weight-primary-regular;
-  // font-style: normal;
   line-height: 1.3;
   // letter-spacing: -0.03em;
   color: $c-heading;
-
-  html.nunito-loaded & {
-    font-family: $f-secondary;
-  }
 }
 
 h1 {

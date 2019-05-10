@@ -1,8 +1,8 @@
+<!DOCTYPE html>
 <html lang="en" class="no-js">
 
 <head>
   {{ partial "head/meta.html" . }}
-  <title>{{ .Page.Title }}</title>
 
   {{ partial "head/head-scripts.html" . }}
   {{ partial "head/critical-css.html" . }}
@@ -16,12 +16,12 @@
     <div class="site-header__inner">
       <h1 class="logo"><a href="/">Derek Morash</a></h1>
 
-      <nav role="navigation" id="site-navigation" class="site-navigation">
-        <ul>
+      <nav role="navigation" id="site-navigation" class="site-header__nav">
+        <ul class="nav-list">
           {{ $currentPage := . }}
           {{ range .Site.Menus.main }}
-            <li>
-              <a href="{{ .URL }}">{{ .Name }}</a>
+            <li class="nav-list__item">
+              <a href="{{ .URL }}" class="nav-list__link">{{ .Name }}</a>
             </li>
           {{ end }}
         </ul>

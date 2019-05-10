@@ -1,5 +1,6 @@
 ---
 title: "Rails 5 Shopify App With Redis Sidekiq Docker"
+description: "Build a Shopify App in Rails 5 with Redis, Sidekiq, and Docker."
 date: 2018-11-15T23:51:24-04:00
 # draft: true
 ---

@@ -1,3 +1,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="author" content="Derek Morash">
+<title>{{ .Page.Title }}</title>
+
+{{ if (isset .Params "description") }}
+<meta name="description" content="{{ index .Params "description" }}">
+{{ else }}
+<meta name="description" content="{{ $.Site.Params.description }}">
+{{ end }}
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="{{ $.Site.Params.title }}" />
+<meta property="og:locale" content="en_ca">
+<meta property="og:title" content="{{ .Page.Title }}" />
+<meta property="og:type" content="video.movie" />
+{{ if (isset .Params "description") }}
+<meta property="og:description" content="{{ index .Params "description" }}" />
+{{ else }}
+<meta property="og:description" content="{{ $.Site.Params.description }}" />
+{{ end }}
+<meta property="og:url" content="{{ .Permalink }}" />
+<!-- <meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" /> -->

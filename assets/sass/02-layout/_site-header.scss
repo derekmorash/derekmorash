@@ -1,7 +1,26 @@
 .site-header {
-  
+  padding: 0.5rem 1.5rem;
 }
 
 .site-header__inner {
   display: flex;
+  align-items: center;
+}
+
+.site-header__nav {
+  margin-left: 2rem;
+}
+
+.nav-list {
+  @include no-list;
+  display: flex;
+}
+
+.nav-list__item {
+  display: inline-block;
+  padding: 0 0.5rem;
+}
+
+.nav-list__link {
+
 }
