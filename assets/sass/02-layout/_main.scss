@@ -1,11 +1,17 @@
 .site-main {
-  max-width: none;
+  max-width: 75rem;
   padding: 0 1.25rem;
   
   @media (min-width: 600px) {
     padding: 0 1.5rem;
   }
-  @media (min-width: 1200px) {
+  @media (min-width: 900px) {
     padding: 0 2rem;
+  }
+  @media (min-width: 1200px) {
+    padding: 0 2.5rem;
+  }
+  @media (min-width: 1400px) {
+    padding: 0 3rem;
   }
 }
