@@ -1,16 +1,16 @@
 // Theme Colours
 // =============
-$c-primary: #009ec2;
-$c-primary-light: lighten($c-primary, 10%);
-$c-primary-dark: darken($c-primary, 10%);
+$c-primary: #0073e6; //#009ec2;
+$c-primary-light: desaturate($c-primary, 10);
+$c-primary-dark: saturate($c-primary, 10);
 
-$c-secondary: #77c200;
-$c-secondary-light: lighten($c-secondary, 10%);
-$c-secondary-dark: darken($c-secondary, 10%);
+$c-secondary: #54eda1;
+$c-secondary-light: desaturate($c-secondary, 10);
+$c-secondary-dark: saturate($c-secondary, 10);
 
-$c-tertiary: #c200aa;
-$c-tertiary-light: lighten($c-tertiary, 10%);
-$c-tertiary-dark: darken($c-tertiary, 10%);
+$c-tertiary: #8152e0;
+$c-tertiary-light: desaturate($c-tertiary, 10);
+$c-tertiary-dark: saturate($c-tertiary, 10);
 
 // Shades
 // ======

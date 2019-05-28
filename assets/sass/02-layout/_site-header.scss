@@ -19,11 +19,12 @@
 
 .site-header__inner {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
 }
 
 .site-header__nav {
-  margin-left: 2rem;
 }
 
 .nav-list {
@@ -33,9 +34,27 @@
 
 .nav-list__item {
   display: inline-block;
-  padding: 0 0.5rem;
+  padding-right: 1rem;
+
+  @media (min-width: 600px) {
+    padding-right: 1.5rem;
+  }
+  @media (min-width: 900px) {
+    padding-right: 2rem;
+  }
+
+  &:last-of-type {
+    padding-right: 0;
+  }
 }
 
 .nav-list__link {
+  text-decoration: none;
 
+  &:hover,
+  &:hover:visited {
+    color: $c-heading;
+    text-decoration: underline;
+    text-decoration-color: $c-link;
+  }
 }

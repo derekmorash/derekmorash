@@ -14,7 +14,12 @@
 <body>
   <header role="banner" class="site-header">
     <div class="site-header__inner">
+
+      {{if not .IsHome}}
+      <p class="logo"><a href="/">Derek Morash</a></p>
+      {{else}}
       <h1 class="logo"><a href="/">Derek Morash</a></h1>
+      {{end}}
 
       <nav role="navigation" id="site-navigation" class="site-header__nav">
         <ul class="nav-list">
