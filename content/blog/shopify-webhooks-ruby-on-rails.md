@@ -1,6 +1,8 @@
 ---
 title: "Handle Shopify Webhooks in Ruby on Rails"
 date: 2018-11-27
+categories: ["Shopify", "Rails"]
+tags: ["Shopify", "Rails", "Redis", "Active Job"]
 ---
 
 Webhooks are a way for Shopify to send data to your app when events in a merchants store happen, such as order or product updates. The ShopifyApp gem makes it easy to subscribe to and manage the webhooks that are required for your app. We'll look at two ways of handling webhooks using the ShopifyApp gem in Ruby on Rails.

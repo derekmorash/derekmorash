@@ -1,0 +1,50 @@
+.pagination {
+  @include no-list();
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 2rem auto;
+  
+  @media (min-width: 600px) {
+    margin: 2.5rem auto;
+  }
+  @media (min-width: 900px) {
+    margin: 3rem auto;
+  }
+}
+
+.page-item {
+  display: inline-block;
+
+  &.active {
+
+  }
+
+  &.disabled {
+    display: none;
+  }
+}
+
+.page-link {
+  @extend .nunito;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background-color: $c-white;
+  color: $c-black;
+  text-decoration: none;
+  text-align: center;
+  line-height: 2rem;
+  transition: background-color 0.1s, color 0.1s;
+
+  &:hover,
+  &:hover:visited {
+    background-color: $c-black;
+    color: $c-white;
+  }
+
+  .page-item.active & {
+    background-color: $c-black;
+    color: $c-white;
+  }
+}

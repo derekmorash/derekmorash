@@ -1,4 +1,5 @@
 (function(){var docElement=document.documentElement;docElement.className=docElement.className.replace('no-js','js');function getCookieValue(cookie_name){cookie_name+="=";var cookie_value=false;var decoded_cookie=decodeURIComponent(document.cookie);var cookie_start=decoded_cookie.indexOf(cookie_name);var cookie_end=decoded_cookie.indexOf(";",cookie_start+1);cookie_end=cookie_end>1?cookie_end:decoded_cookie.length;if(cookie_start>=0&&cookie_end<=decoded_cookie.length){cookie_value=decoded_cookie.substring(cookie_start+cookie_name.length,cookie_end);}
 if(cookie_value==="true"){cookie_value=true;}else if(cookie_value==="false"){cookie_value=false;}
 return cookie_value;}
-if(getCookieValue('inter-loaded')){docElement.className+=" inter-loaded";}})();
+if(getCookieValue('noto-serif-loaded')){docElement.className+=" noto-serif-loaded";}
+if(getCookieValue('nunito-loaded')){docElement.className+=" nunito-loaded";}})();

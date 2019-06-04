@@ -1,52 +1,75 @@
+<!DOCTYPE html>
 <html lang="en" class="no-js">
 
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Javascript JSON Search</title>
+<meta name="author" content="Derek Morash">
+<title>Javascript JSON Search</title>
+
+
+<meta name="description" content="">
+
+
+
+<meta property="og:site_name" content="" />
+<meta property="og:locale" content="en_ca">
+<meta property="og:title" content="Javascript JSON Search" />
+<meta property="og:type" content="video.movie" />
+
+<meta property="og:description" content="" />
+
+<meta property="og:url" content="https://derekmorash.com/blog/javascript-json-search/" />
+
 
   
 <script>
   (function(){var docElement=document.documentElement;docElement.className=docElement.className.replace('no-js','js');function getCookieValue(cookie_name){cookie_name+="=";var cookie_value=false;var decoded_cookie=decodeURIComponent(document.cookie);var cookie_start=decoded_cookie.indexOf(cookie_name);var cookie_end=decoded_cookie.indexOf(";",cookie_start+1);cookie_end=cookie_end>1?cookie_end:decoded_cookie.length;if(cookie_start>=0&&cookie_end<=decoded_cookie.length){cookie_value=decoded_cookie.substring(cookie_start+cookie_name.length,cookie_end);}
 if(cookie_value==="true"){cookie_value=true;}else if(cookie_value==="false"){cookie_value=false;}
 return cookie_value;}
-if(getCookieValue('inter-loaded')){docElement.className+=" inter-loaded";}})();
+if(getCookieValue('noto-serif-loaded')){docElement.className+=" noto-serif-loaded";}
+if(getCookieValue('nunito-loaded')){docElement.className+=" nunito-loaded";}})();
 </script>
 
 
 
 
 
-<script src="https://derekmorash.com/js/bundle.min.8a17fdd9466c77f7aa941806a4678d846c3a3c71c180eef34ebb4fed663a692f.js"></script>
+<script src="https://derekmorash.com/js/bundle.min.ef11d7f89f339226024806d26e72c7dc0f5527852fefe93e90cfd2086ee5394e.js"></script>
   
+
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif|Nunito:600" rel="stylesheet">
 
 
 <style>
        
 
-  /*!normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css*/html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}progress{vertical-align:baseline}template,[hidden]{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}button,input,select,textarea{font:inherit;margin:0}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}html{box-sizing:border-box;font-size:16px;background:#f6f6f6}@media(min-width:1280px){html{font-size:18px}}*,*::before,*::after{box-sizing:border-box}body{font-size:1rem;font-family:Helvetica,Arial,Verdana,sans-serif;font-family:inter,Helvetica,Arial,Verdana,sans-serif;font-weight:400;font-style:normal;letter-spacing:.002em;line-height:1.5;background:#f6f6f6;color:#262626}html.inter-loaded body{font-family:inter,Helvetica,Arial,Verdana,sans-serif}p{margin:.5rem 0}em{font-size:1rem;font-style:italic}strong{font-weight:600;font-style:normal;color:#000}a{color:#262626;text-decoration:underline;text-decoration-skip:objects;text-decoration-color:#009ec2;transition:color .05s}a:hover,a:hover:visited{color:#009ec2}h1,h2,h3,h4,h5,h6{margin:1.75em 0 .75rem;font-weight:600;font-style:normal;line-height:1.1;letter-spacing:-.03em;color:#000}h1{font-size:2.255rem}h2{font-size:2rem}h3{font-size:1.75rem}h4{font-size:1.5rem}h5{font-size:1.25rem}h6{font-size:1.25rem}h1+h2,h2+h3,h3+h4,h4+h5,h5+h6{margin-top:0}img{max-width:100%;height:auto}pre{overflow:scroll}figure{margin:1rem 0}
+  .nunito,h1,h2,h3,h4,h5,h6{font-family:sans-serif;font-weight:400}html.nunito-loaded .nunito,html.nunito-loaded h1,html.nunito-loaded h2,html.nunito-loaded h3,html.nunito-loaded h4,html.nunito-loaded h5,html.nunito-loaded h6{font-family:nunito,sans-serif}/*!normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css*/html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}template,[hidden]{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}button,input,select,textarea{font:inherit;margin:0}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:0;margin:0;padding:0}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}html{box-sizing:border-box;font-size:16px;background:#fff}@media(min-width:900px){html{font-size:18px}}@media(min-width:1200px){html{font-size:20px}}*,*::before,*::after{box-sizing:border-box}body{font-size:1rem;font-family:serif;font-weight:400;font-style:normal;letter-spacing:.01em;line-height:1.5;background:#fff;color:#262626}html.noto-serif-loaded body{font-family:"noto serif",serif}p{margin:0 0 1.75rem}em{font-size:1rem;font-style:italic}strong{font-weight:400;font-style:normal;color:#000}a{color:#262626;text-decoration:underline;text-decoration-skip:objects;text-decoration-color:#0073e6;transition:color .2s}a:hover,a:hover:visited{color:#0073e6}h1,h2,h3,h4,h5,h6{margin:2.5em 0 .75rem;line-height:1.3;color:#000}h1{font-size:1.75rem}h2{font-size:1.5rem}h3{font-size:1.25rem}h4{font-size:1rem}h5{font-size:1rem}h6{font-size:1rem}h1+h2,h2+h3,h3+h4,h4+h5,h5+h6{margin-top:0}img{max-width:100%;height:auto}pre,code{font-family:courier new,Courier,monospace}pre{overflow:scroll}figure{margin:1rem 0}main{max-width:40rem;margin:0 auto;padding:1.5rem}
 </style>
 
   
-  <link rel="stylesheet" href="https://derekmorash.com/sass/main.min.70c065ee61e73218973f973e6404f6cb53da33de57439b84dc6124a17c78e1b7.css" integrity=”sha256-cMBl7mHnMhiXP5c&#43;ZAT2y1PaM95XQ5uE3GEkoXx44bc&#61;”>
+  <link rel="stylesheet" href="https://derekmorash.com/sass/main.min.e41efcb2cdeb4efc5c53f8046fcebdebb4ab905e79403cd3a0bfbbf300339bae.css" integrity=”sha256-5B78ss3rTvxcU/gEb86967SrkF55QDzToL&#43;78wAzm64&#61;”>
 </head>
 
 <body>
   <header role="banner" class="site-header">
     <div class="site-header__inner">
-      <h1 class="logo"><a href="/">Derek Morash</a></h1>
 
-      <nav role="navigation" id="site-navigation" class="site-navigation">
-        <ul>
+      
+      <p class="logo"><a href="/">Derek Morash</a></p>
+      
+
+      <nav role="navigation" id="site-navigation" class="site-header__nav">
+        <ul class="nav-list">
           
           
-            <li>
-              <a href="/about/">About</a>
+            <li class="nav-list__item">
+              <a href="/blog/" class="nav-list__link">Blog</a>
             </li>
           
-            <li>
-              <a href="/blog/">Blog</a>
+            <li class="nav-list__item">
+              <a href="/about/" class="nav-list__link">About</a>
             </li>
           
         </ul>
@@ -57,20 +80,24 @@ if(getCookieValue('inter-loaded')){docElement.className+=" inter-loaded";}})();
 <main class="site-main">
   <article role="main" class="blog-post">
     <header class="blog-post__header">
-      <div class="blog-post__header--inner">
-        <h1>Javascript JSON Search</h1>
-  
+
+      
+
+      <h1 class="blog-post__title">Javascript JSON Search</h1>
+
+      <aside class="blog-post__metadata">
         
-        <aside class="postmetadata">Posted on <time datetime="2016-05-08 00:00:00 &#43;0000 UTC">2016-05-08 00:00:00 &#43;0000 UTC</time></aside>
-      </div>
+        <p class="blog-post__date">Posted on <time datetime="2016-05-08">May 8, 2016</time></p>
+      </aside>
     </header>
 
     <section class="blog-post__content rte">
+      
       <p>A quick tutorial on how to load JSON data with Ajax and query it with a search string. To see a demo and the working code checkout <a href="http://codepen.io/derekmorash/pen/dGLdxN">this codepen</a>. It was a Javascript challenge exercise by <a href="https://twitter.com/wesbos">Wes Bos</a>, I wrote the Javascript.</p>
 
 <p>This is what it looks like completed. A list of results appear that match the search query.</p>
 
-<p><img src="/blog/javascript-json-search/search.gif" alt="search" title="search" /></p>
+<p><img src="images/search.gif" alt="search" title="search" /></p>
 
 <p>First we&rsquo;ll set up our HTML, it&rsquo;s super simple. We&rsquo;ll need an input text box to type our search query into, and an unordered list to display the matched results. I have these wrapped in a form element just to be able to style it, but I won&rsquo;t cover any CSS styling in this.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-HTML" data-lang="HTML">&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;search-form&#34;</span>&gt;

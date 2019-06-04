@@ -1,17 +1,33 @@
 .site-main {
   max-width: 75rem;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   
   @media (min-width: 600px) {
-    padding: 0 1.5rem;
-  }
-  @media (min-width: 900px) {
-    padding: 0 2rem;
-  }
-  @media (min-width: 1200px) {
     padding: 0 2.5rem;
   }
-  @media (min-width: 1400px) {
+  @media (min-width: 900px) {
     padding: 0 3rem;
+  }
+}
+
+.blog-list__header {
+  @extend .nunito;
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: 2rem 0;
+  text-align: center;
+
+  @media (min-width: 900px) {
+    padding: 3rem 0;
+  }
+}
+
+.blog-list__title {
+  margin: 1rem 0;
+  font-size: 1.75rem;
+  line-height: 1.1;
+
+  @media (min-width: 900px) {
+    font-size: 2.25rem;
   }
 }

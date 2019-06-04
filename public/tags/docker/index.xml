@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Derek Morash</title>
+    <link>https://derekmorash.com/tags/docker/</link>
+    <description>Recent content in Docker on Derek Morash</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Nov 2018 23:51:24 -0400</lastBuildDate>
+    
+	<atom:link href="https://derekmorash.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rails 5 Shopify App With Redis Sidekiq Docker</title>
+      <link>https://derekmorash.com/blog/rails-5-shopify-app-with-redis-sidekiq-docker/</link>
+      <pubDate>Thu, 15 Nov 2018 23:51:24 -0400</pubDate>
+      
+      <guid>https://derekmorash.com/blog/rails-5-shopify-app-with-redis-sidekiq-docker/</guid>
+      <description>Goals  Create a new Rails 5 app Use the shopify_app gem for app architecture and API access Redis and Sidekiq for jobs Develop locally with the app contained in Docker  Prerequisites  Experience with Ruby and Rails Updated versions of Ruby, Rails, and Docker.</description>
+    </item>
+    
+  </channel>
+</rss>

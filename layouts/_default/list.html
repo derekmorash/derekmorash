@@ -1,9 +1,14 @@
 {{ partial "header/site-header.html" . }}
 
 <main class="site-main">
+
+  <header class="blog-list__header">
+    <h1 class="blog-list__title">{{ .Title }}</h1>
+  </header>
+
   <ul class="blog-list">
     <!-- Ranges through content/blog/*.md -->
-    {{ range (.Paginator 5).Pages }}  
+    {{ range (.Paginator 3).Pages }}  
       <li class="blog-list__item">
         <a class="blog-list__item-link" href="{{.RelPermalink}}" title="Read: {{ .Title }}.">
           <figure class="blog-list__item-figure">
@@ -13,9 +18,7 @@
           </figure>
           {{ if .Params.categories }}
             <p class="blog-list__item-categories">
-              {{ range .Params.categories }}
-                {{ . }}
-              {{ end }}
+              {{ range $i, $cat := .Params.categories }}{{ if $i }}, {{ end }}{{ $cat }}{{ end }}
             </p>
           {{ end }}
           <h2 class="blog-list__item-title">{{ .Title }}</h2>
@@ -30,6 +33,7 @@
       </li>
     {{ end }}
   </ul>
+  {{ template "_internal/pagination.html" . }}
 </main>
 
 {{ partial "footer/site-footer.html" . }}

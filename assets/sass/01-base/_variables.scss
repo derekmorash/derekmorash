@@ -12,6 +12,10 @@ $c-tertiary: #8152e0;
 $c-tertiary-light: desaturate($c-tertiary, 10);
 $c-tertiary-dark: saturate($c-tertiary, 10);
 
+$c-quaternary: #d63850;
+$c-quaternary-light: desaturate($c-quaternary, 10);
+$c-quaternary-dark: saturate($c-quaternary, 10);
+
 // Shades
 // ======
 $c-white: #FFF;
