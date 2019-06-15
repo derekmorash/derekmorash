@@ -1,12 +1,12 @@
 .site-main {
   max-width: 75rem;
-  padding: 0 2rem;
+  padding: 0 2rem 2rem;
   
   @media (min-width: 600px) {
-    padding: 0 2.5rem;
+    padding: 0 2.5rem 2.5rem;
   }
   @media (min-width: 900px) {
-    padding: 0 3rem;
+    padding: 0 3rem 3rem;
   }
 }
 

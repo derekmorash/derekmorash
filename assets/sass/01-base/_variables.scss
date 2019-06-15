@@ -4,15 +4,15 @@ $c-primary: #0073e6; //#009ec2;
 $c-primary-light: desaturate($c-primary, 10);
 $c-primary-dark: saturate($c-primary, 10);
 
-$c-secondary: #54eda1;
+$c-secondary: #8ac4ff;
 $c-secondary-light: desaturate($c-secondary, 10);
 $c-secondary-dark: saturate($c-secondary, 10);
 
-$c-tertiary: #8152e0;
+$c-tertiary: #00e699;//#8affb1;//#54eda1;
 $c-tertiary-light: desaturate($c-tertiary, 10);
 $c-tertiary-dark: saturate($c-tertiary, 10);
 
-$c-quaternary: #d63850;
+$c-quaternary: #9d8aff;
 $c-quaternary-light: desaturate($c-quaternary, 10);
 $c-quaternary-dark: saturate($c-quaternary, 10);
 

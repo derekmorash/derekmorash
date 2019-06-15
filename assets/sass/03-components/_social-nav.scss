@@ -1,0 +1,17 @@
+.social-nav {
+
+}
+
+.social-nav__list {
+  @include no-list();
+}
+
+.social-nav__item {
+  display: inline-block;
+}
+
+.social-nav__link {
+  @extend .nunito;
+  line-height: 1.3;
+  font-size: 1rem;
+}
