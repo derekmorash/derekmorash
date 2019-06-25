@@ -1,5 +1,5 @@
 .site-footer {
-  background-color: lighten(desaturate($c-primary, 90), 35);
+  background-color: lighten(desaturate($c-primary, 70), 35);
 
   .logo {
     font-size: 1rem;
@@ -21,9 +21,12 @@
 .site-footer__inner {
   max-width: 75rem;
   margin: 0 auto;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1.5rem;
   text-align: center;
 
+  @media (min-width: 500px) {
+    padding: 0.5rem 2rem;
+  }
   @media (min-width: 600px) {
     display: flex;
     justify-content: space-between;
@@ -40,6 +43,7 @@
 
 .site-footer__copyright {
   background-color: $c-black;
+  border-bottom: solid 0.5rem $c-secondary;
 
   small {
     display: block;

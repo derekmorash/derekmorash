@@ -1,8 +1,11 @@
 .site-header {
   max-width: 75rem;
   margin: 0 auto;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1.5rem;
 
+  @media (min-width: 500px) {
+    padding: 0.5rem 2rem;
+  }
   @media (min-width: 600px) {
     padding: 0.5rem 2.5rem;
   }

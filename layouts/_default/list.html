@@ -2,38 +2,40 @@
 
 <main class="site-main">
 
-  <header class="blog-list__header">
-    <h1 class="blog-list__title">{{ .Title }}</h1>
-  </header>
+  <article class="blog">
+    <header class="blog-list__header">
+      <h1 class="blog-list__title">{{ .Title }}</h1>
+    </header>
 
-  <ul class="blog-list">
-    <!-- Ranges through content/blog/*.md -->
-    {{ range (.Paginator 3).Pages }}  
-      <li class="blog-list__item">
-        <a class="blog-list__item-link" href="{{.RelPermalink}}" title="Read: {{ .Title }}.">
-          <figure class="blog-list__item-figure">
+    <ul class="blog-list">
+      <!-- Ranges through content/blog/*.md -->
+      {{ range (.Paginator 3).Pages }}  
+        <li class="blog-list__item">
+          <a class="blog-list__item-link" href="{{.RelPermalink}}" title="Read: {{ .Title }}.">
+            <figure class="blog-list__item-figure">
 
-            {{ $placeholder := resources.Get "images/blog-placeholder.jpg" }}
-            <img src="{{ $placeholder.Permalink }}" alt="{{ .Title }}" class="blog-list__item-image">
-          </figure>
-          {{ if .Params.categories }}
-            <p class="blog-list__item-categories">
-              {{ range $i, $cat := .Params.categories }}{{ if $i }}, {{ end }}{{ $cat }}{{ end }}
-            </p>
-          {{ end }}
-          <h2 class="blog-list__item-title">{{ .Title }}</h2>
-          <p class="blog-list__item-summary">
-            {{ if .Description }}
-              {{ .Description }}
-            {{ else }}
-              {{ .Summary }} <!-- automatically takes the first paragraph in the .md article -->
+              {{ $placeholder := resources.Get "images/blog-placeholder.jpg" }}
+              <img src="{{ $placeholder.Permalink }}" alt="{{ .Title }}" class="blog-list__item-image">
+            </figure>
+            {{ if .Params.categories }}
+              <p class="blog-list__item-categories">
+                {{ range $i, $cat := .Params.categories }}{{ if $i }}, {{ end }}{{ $cat }}{{ end }}
+              </p>
             {{ end }}
-          </p>
-        </a>
-      </li>
-    {{ end }}
-  </ul>
-  {{ template "_internal/pagination.html" . }}
+            <h2 class="blog-list__item-title">{{ .Title }}</h2>
+            <p class="blog-list__item-summary">
+              {{ if .Description }}
+                {{ .Description }}
+              {{ else }}
+                {{ .Summary }} <!-- automatically takes the first paragraph in the .md article -->
+              {{ end }}
+            </p>
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+    {{ template "_internal/pagination.html" . }}
+  </article>
 </main>
 
 {{ partial "footer/site-footer.html" . }}
