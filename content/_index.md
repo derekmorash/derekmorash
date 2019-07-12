@@ -3,4 +3,4 @@ type = "page"
 description = "Derek Morash"
 title = "Derek Morash"
 +++
-Homepage content
+Derek is a software developer from Halifax Nova Scotia, writing code for the web and generative design systems.

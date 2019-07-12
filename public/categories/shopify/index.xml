@@ -30,15 +30,6 @@
     </item>
     
     <item>
-      <title>Handle Shopify Mandatory Webhooks in Ruby on Rails</title>
-      <link>https://derekmorash.com/blog/handle-shopify-mandatory-webhooks-in-ruby-on-rails/</link>
-      <pubDate>Thu, 15 Nov 2018 23:53:34 -0400</pubDate>
-      
-      <guid>https://derekmorash.com/blog/handle-shopify-mandatory-webhooks-in-ruby-on-rails/</guid>
-      <description>Since May 25th, 2018 GDPR has imposed obligations on any party that collects, stores, or processes personal data. App developers have the responsibility to comply with these regulations.</description>
-    </item>
-    
-    <item>
       <title>Rails 5 Shopify App With Redis Sidekiq Docker</title>
       <link>https://derekmorash.com/blog/rails-5-shopify-app-with-redis-sidekiq-docker/</link>
       <pubDate>Thu, 15 Nov 2018 23:51:24 -0400</pubDate>

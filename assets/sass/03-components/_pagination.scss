@@ -39,12 +39,12 @@
 
   &:hover,
   &:hover:visited {
-    background-color: $c-black;
+    background-color: $c-primary;
     color: $c-white;
   }
 
   .page-item.active & {
-    background-color: $c-black;
+    background-color: $c-primary;
     color: $c-white;
   }
 }

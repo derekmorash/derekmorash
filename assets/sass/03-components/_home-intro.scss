@@ -1,0 +1,19 @@
+.home-intro {
+  @extend .page-header;
+}
+
+.home-intro__title {
+  @extend .page-header__title;
+}
+
+// .home-intro__figure {
+// }
+
+// .home-intro__image {
+//   display: block;
+//   width: 100%;
+// }
+
+.home-intro__summary {
+  @extend .page-header__summary;
+}

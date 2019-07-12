@@ -61,11 +61,12 @@ a {
   text-decoration: underline;
   text-decoration-skip: objects;
   text-decoration-color: $c-link;
-  transition: color 0.2s;
+  transition: color 0.5s;
 
   &:hover,
   &:hover:visited {
-    color: $c-link;
+    color: $c-primary;
+    transition: color 0.2s;
   }
 }
 
