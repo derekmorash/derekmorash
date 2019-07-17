@@ -49,15 +49,10 @@
     }
 
     figcaption {
+      @extend .nunito;
       margin-top: 0.5rem;
       font-size: 0.75rem;
       color: $c-primary;
-      font-family: $f-secondary-fallback;
-      font-weight: $f-weight-secondary-regular;
-    
-      html.nunito-loaded & {
-        font-family: $f-secondary;
-      }
     }
 
     @media (min-width: 600px) {

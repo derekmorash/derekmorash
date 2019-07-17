@@ -1,35 +1,37 @@
-(function() {
-  var docElement = document.documentElement;
+(global => {
+  window.derek = window.derek || {};
 
-  // check if 'Noto Serif' has already been downloaded
-  if (docElement.className.indexOf('noto-serif-loaded') < 0 || !derek.utils.getCookie('noto-serif-loaded')) {
-    console.log('Load Noto Serif');
-    // create a new FontFaceObserver to watch for 'Noto Serif' to download
-    var fontNotoSerif = new FontFaceObserver('Noto Serif');
+  window.derek.fonts = [
+    {
+      "family": "Noto Serif",
+      "weight": 400,
+      "style": "normal"
+    },
+    {
+      "family": "Nunito",
+      "weight": 600,
+      "style": "normal"
+    }
+  ];
 
-    fontNotoSerif.load().then(function() {
-      docElement.className += " noto-serif-loaded";
-      derek.utils.setCookie({
-        name: 'noto-serif-loaded',
-        value: true,
-        expires: 30
+  window.derek.fonts.forEach((themeFont) => {
+    let fontHandle = `${themeFont.family.toLowerCase().replace(/ /g,'-')}-${themeFont.weight}-${themeFont.style}`;
+
+    if (sessionStorage[fontHandle + '-loaded']) {
+      document.documentElement.classList.add(themeFont.family.toLowerCase().replace(/ /g,'-') + '-loaded');
+      document.documentElement.classList.add(fontHandle);
+    } else {
+      let font = new FontFaceObserver(themeFont.family, {
+        weight: themeFont.weight || 'normal',
+        style: themeFont.style || 'normal'
       });
-    });
-  }
 
-  // check if 'Nunito' has already been downloaded
-  if (docElement.className.indexOf('nunito-loaded') < 0 || !derek.utils.getCookie('nunito-loaded')) {
-    console.log('Load Nunito');
-    // create a new FontFaceObserver to watch for 'Nunito' to download
-    var fontNunito = new FontFaceObserver('Nunito');
-
-    fontNunito.load().then(function() {
-      docElement.className += " nunito-loaded";
-      derek.utils.setCookie({
-        name: 'nunito-loaded',
-        value: true,
-        expires: 30
+      font.load().then(() => {
+        themeFont.font = font;
+        document.documentElement.classList.add(themeFont.family.toLowerCase().replace(/ /g,'-') + '-loaded');
+        document.documentElement.classList.add(fontHandle);
+        sessionStorage[fontHandle + '-loaded'] = true;
       });
-    });
-  }
-})();
+    }
+  });
+})(window);

@@ -25,20 +25,14 @@ html {
 }
 
 body {
+  @extend .noto;
   font-size: 1rem;
-  font-family: $f-primary-fallback;
-  font-weight: $f-weight-primary-regular;
   font-style: normal;
   letter-spacing: 0.01em;
-  // line-height: 1.38;
-  // line-height: 1.10909;
   line-height: 1.5;
   background: $c-white;
   color: $c-text;
-
-  html.noto-serif-loaded & {
-    font-family: $f-primary;
-  }
+  overflow-x: hidden;
 }
 
 p {
@@ -137,4 +131,15 @@ main {
   max-width: 40rem;
   margin: 0 auto;
   padding: 1.5rem;
+}
+
+.skip-to-content {
+  position: absolute;
+  top: -100rem;
+  left: 0;
+  font-family: $f-primary;
+
+  &:focus {
+    top: 0;
+  }
 }

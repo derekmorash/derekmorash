@@ -1,6 +1,6 @@
 {{ partial "header/site-header.html" . }}
 
-<main class="site-main">
+<main id="site-main" class="site-main">
 
   <article class="blog">
     <header class="blog-list__header">
@@ -9,7 +9,7 @@
 
     <ul class="blog-list">
       <!-- Ranges through content/blog/*.md -->
-      {{ range (.Paginator 3).Pages }}  
+      {{ range (.Paginator 9).Pages }}  
         <li class="blog-list__item">
           <a class="blog-list__item-link" href="{{.RelPermalink}}" title="Read: {{ .Title }}.">
             {{/*  <figure class="blog-list__item-figure">
