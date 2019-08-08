@@ -39,6 +39,24 @@
     </item>
     
     <item>
+      <title>VMIN for p5js canvas</title>
+      <link>https://derekmorash.com/blog/vmin-for-p5js-canvas/</link>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://derekmorash.com/blog/vmin-for-p5js-canvas/</guid>
+      <description>I use a similar layout for a lot of my creative codepens and p5js sketches, as you can see in this collection.</description>
+    </item>
+    
+    <item>
+      <title>Simple Image Lazy Loading</title>
+      <link>https://derekmorash.com/blog/simple-image-lazy-loading/</link>
+      <pubDate>Wed, 17 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://derekmorash.com/blog/simple-image-lazy-loading/</guid>
+      <description>Quick post to explain a simple lazy loading technique. The main idea here is to initially load a very small resolution version of the image at first to speed up initial page load, and then replace that low res image with a higher res version once everything on the page is finished loading.</description>
+    </item>
+    
+    <item>
       <title>Javascript JSON Search</title>
       <link>https://derekmorash.com/blog/javascript-json-search/</link>
       <pubDate>Sun, 08 May 2016 00:00:00 +0000</pubDate>
@@ -54,6 +72,34 @@
       
       <guid>https://derekmorash.com/blog/html5-canvas-tag-intro/</guid>
       <description>This is a walk through/tutorial on the basics of the HTML5 Canvas Tag. We will start by creating some simple shapes and then move on to some animation.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://derekmorash.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://derekmorash.com/about/</guid>
+      <description> Contact  Email derek.morash@gmail.com Twitter @derek_morash Instagram gammastop Codepen derekmorash Github derekmorash  </description>
+    </item>
+    
+    <item>
+      <title>B Spline</title>
+      <link>https://derekmorash.com/generative/b-spline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://derekmorash.com/generative/b-spline/</guid>
+      <description>Horizontal B Spline   A recreation of a work by one of my favourite artists, Anders Hoff (Inconvergent), called Sand Spline.</description>
+    </item>
+    
+    <item>
+      <title>B Spline Strings</title>
+      <link>https://derekmorash.com/generative/b-spline-strings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://derekmorash.com/generative/b-spline-strings/</guid>
+      <description>Horizontal B Spline   B Spline system for creating string like images.
+A similar approach to my B Spline pieces, but in a more minimal style to appear almost hand drawn.</description>
     </item>
     
   </channel>

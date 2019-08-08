@@ -1,6 +1,6 @@
 (function() {
   var docElement = document.documentElement;
-  docElement.className = docElement.className.replace('no-js', 'js');
+  docElement.classList.replace('no-js', 'js');
 
   if (sessionStorage['noto-serif-400-normal-loaded']) {
     document.documentElement.classList.add("noto-serif-loaded");

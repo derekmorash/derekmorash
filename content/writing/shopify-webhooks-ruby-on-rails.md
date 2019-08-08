@@ -9,7 +9,7 @@ Webhooks are a way for Shopify to send data to your app when events in a merchan
 
 **Note about Mandatory Webhooks:**
 
-If you're using the *shopify_app* gem you can use the [webhooks manager](https://github.com/Shopify/shopify_app#webhooksmanager) to configure the webhooks our app needs. However, Mandatory webhooks differ slightly in the way they're configured. I have another article about how to set these up: [Handle Shopify Mandatory Webhooks in Ruby on Rails](/blog/handle-shopify-mandatory-webhooks-in-ruby-on-rails/).
+If you're using the *shopify_app* gem you can use the [webhooks manager](https://github.com/Shopify/shopify_app#webhooksmanager) to configure the webhooks our app needs. However, Mandatory webhooks differ slightly in the way they're configured. I have another article about how to set these up: [Handle Shopify Mandatory Webhooks in Ruby on Rails](/writing/handle-shopify-mandatory-webhooks-in-ruby-on-rails/).
 
 ## Configure Webhook
 

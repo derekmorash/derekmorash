@@ -11,26 +11,33 @@
       <!-- Ranges through content/blog/*.md -->
       {{ range (.Paginator 9).Pages }}  
         <li class="blog-list__item">
-          <a class="blog-list__item-link" href="{{.RelPermalink}}" title="Read: {{ .Title }}.">
-            {{/*  <figure class="blog-list__item-figure">
-
-              {{ $placeholder := resources.Get "images/blog-placeholder.jpg" }}
-              <img src="{{ $placeholder.Permalink }}" alt="{{ .Title }}" class="blog-list__item-image">
-            </figure>  */}}
-            {{ if .Params.categories }}
-              <p class="blog-list__item-categories">
-                {{ range $i, $cat := .Params.categories }}{{ if $i }}, {{ end }}{{ $cat }}{{ end }}
-              </p>
-            {{ end }}
-            <h2 class="blog-list__item-title">{{ .Title }}</h2>
-            <p class="blog-list__item-summary">
-              {{ if .Description }}
-                {{ .Description }}
-              {{ else }}
-                {{ .Summary }} <!-- automatically takes the first paragraph in the .md article -->
+          <article class="blog-list__item-article" itemscope itemType="http://schema.org/BlogPosting">
+            <a class="blog-list__item-link" href="{{.RelPermalink}}" title="Read: {{ .Title }}.">
+              {{/*  <figure class="blog-list__item-figure">
+  
+                {{ $featured_image := resources.Get "images/blog-placeholder.jpg" }}
+  
+                {{ if isset .Params "featured_image" }}
+                  {{ .Scratch.Set "thumbnailImage"  (.Params.featured_image | absURL) }}
+                  <img src="{{ .Scratch.Get "thumbnailImage" }}" alt="{{ .Title }}" class="blog-list__item-image">
+                {{ end }}
+  
+              </figure>  */}}
+              {{ if .Params.categories }}
+                <p class="blog-list__item-categories">
+                  {{ range $i, $cat := .Params.categories }}{{ if $i }}, {{ end }}{{ $cat }}{{ end }}
+                </p>
               {{ end }}
-            </p>
-          </a>
+              <h2 class="blog-list__item-title">{{ .Title }}</h2>
+              <p class="blog-list__item-summary">
+                {{ if .Description }}
+                  {{ .Description }}
+                {{ else }}
+                  {{ .Summary }} <!-- automatically takes the first paragraph in the .md article -->
+                {{ end }}
+              </p>
+            </a>
+          </article>
         </li>
       {{ end }}
     </ul>

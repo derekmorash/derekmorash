@@ -15,17 +15,18 @@
 
   <article class="blog">
     <header class="blog-list__header">
-      <h2 class="blog-list__title">Blog</h2>
+      <h2 class="blog-list__title">Writing</h2>
     </header>
     <ul class="blog-list">
       <!-- Ranges through content/blog/*.md -->
-      {{ range first 3 ( where .Site.RegularPages "Type" "blog" ) }}
+      {{ range first 3 ( where .Site.RegularPages "Type" "writing" ) }}
         <li class="blog-list__item">
           <a class="blog-list__item-link" href="{{.RelPermalink}}" title="Read: {{ .Title }}.">
             {{/*  <figure class="blog-list__item-figure">
 
               {{ $placeholder := resources.Get "images/blog-placeholder.jpg" }}
-              <img src="{{ $placeholder.Permalink }}" alt="{{ .Title }}" class="blog-list__item-image">
+              {{ $placeholder := $placeholder.Permalink }}
+              <img src="{{ $placeholder }}" alt="{{ .Title }}" class="blog-list__item-image">
             </figure>  */}}
             {{ if .Params.categories }}
               <p class="blog-list__item-categories">

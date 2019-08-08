@@ -1,0 +1,32 @@
+{{ partial "header/site-header.html" . }}
+ 
+<main id="site-main" class="site-main">
+  <article role="main" class="blog-post">
+    <header class="blog-post__header">
+
+      {{/*  {{ if .Params.categories }}
+        <p class="blog-post__categories">
+          {{ range .Params.categories }}
+            {{ . }}
+          {{ end }}
+        </p>
+      {{ end }}  */}}
+
+      <p class="blog-post__categories">{{ .Type }}</p>
+
+      <h1 class="blog-post__title">{{ .Page.Title }}</h1>
+
+      <aside class="blog-post__metadata">
+        <!-- <p class="blog-post__reading-time">Estimated reading time <span>{{ .Page.ReadingTime }} minutes</span></p> -->
+        <p class="blog-post__date">Posted on <time datetime="{{ .PublishDate.Format "2000-01-01" }}">{{ .PublishDate.Format "January 1, 2000" }}</time></p>
+      </aside>
+    </header>
+
+    <section class="blog-post__content rte">
+      <!-- {{ .TableOfContents }} -->
+      {{ .Content }}
+    </section>
+  </article>
+</main>
+ 
+{{ partial "footer/site-footer.html" . }}

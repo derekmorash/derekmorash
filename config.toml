@@ -4,4 +4,5 @@ title = "Derek Morash"
 description = "Derek Morash is a software developer"
 assetDir = 'assets'
 pygmentsCodeFences = true
+pygmentsUseClasses = true
 summaryLength = 20

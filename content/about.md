@@ -7,7 +7,7 @@ draft = false
 
 [menu]
   [menu.main]
-    weight = 2
+    weight = 3
 +++
 
 ## Contact

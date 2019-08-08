@@ -1,0 +1,49 @@
+{{ partial "header/site-header.html" . }}
+
+<main id="site-main" class="site-main">
+
+  <article class="blog">
+    <header class="blog-list__header">
+      <h1 class="blog-list__title">{{ .Title }}</h1>
+    </header>
+
+    <ul class="blog-list">
+      <!-- Ranges through content/blog/*.md -->
+      {{ range (.Paginator 9).Pages }}  
+        <li class="blog-list__item">
+          <article class="blog-list__item-article" itemscope itemType="http://schema.org/BlogPosting">
+            <a class="blog-list__item-link" href="{{.RelPermalink}}" title="Read: {{ .Title }}.">
+             
+              <figure class="blog-list__item-figure">
+                
+                {{ if isset .Params "featured_image" }}
+                  <img src="{{ .RelPermalink }}{{ .Params.featured_image }}" alt="{{ .Title }}" class="blog-list__item-image">
+                {{ else }}
+                  {{ $placeholder := resources.Get "images/blog-placeholder.jpg" }}
+                  {{ $placeholder := $placeholder.Permalink }}
+                  <img src="{{ $placeholder }}" alt="{{ .Title }}" class="blog-list__item-image">
+                {{ end }}
+              </figure>
+              {{ if .Params.categories }}
+                <p class="blog-list__item-categories">
+                  {{ range $i, $cat := .Params.categories }}{{ if $i }}, {{ end }}{{ $cat }}{{ end }}
+                </p>
+              {{ end }}
+              <h2 class="blog-list__item-title">{{ .Title }}</h2>
+              <p class="blog-list__item-summary">
+                {{ if .Description }}
+                  {{ .Description }}
+                {{ else }}
+                  {{ .Summary }} <!-- automatically takes the first paragraph in the .md article -->
+                {{ end }}
+              </p>
+            </a>
+          </article>
+        </li>
+      {{ end }}
+    </ul>
+    {{ template "_internal/pagination.html" . }}
+  </article>
+</main>
+
+{{ partial "footer/site-footer.html" . }}

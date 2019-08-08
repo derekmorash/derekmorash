@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Animation on Derek Morash</title>
+    <link>https://derekmorash.com/categories/animation/</link>
+    <description>Recent content in Animation on Derek Morash</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://derekmorash.com/categories/animation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Simple Image Lazy Loading</title>
+      <link>https://derekmorash.com/blog/simple-image-lazy-loading/</link>
+      <pubDate>Wed, 17 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://derekmorash.com/blog/simple-image-lazy-loading/</guid>
+      <description>Quick post to explain a simple lazy loading technique. The main idea here is to initially load a very small resolution version of the image at first to speed up initial page load, and then replace that low res image with a higher res version once everything on the page is finished loading.</description>
+    </item>
+    
+  </channel>
+</rss>
