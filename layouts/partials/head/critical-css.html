@@ -1,6 +1,6 @@
 {{ $critical := resources.Get "sass/critical.scss" | resources.ToCSS | resources.Minify }}
 
-<link href="https://fonts.googleapis.com/css?family=Noto+Serif|Nunito:600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif|Nunito:600&display=swap" rel="stylesheet">
 
 <!-- {{ $InterRegularWoff2 := resources.Get "fonts/Inter-Regular.woff2" | resources.Fingerprint }}
 {{ $InterRegularWoff := resources.Get "fonts/Inter-Regular.woff" | resources.Fingerprint }}

@@ -7,4 +7,4 @@
 {{/*  {{ $utils := resources.Get "js/utils/utils.js" }}  */}}
 {{ $main := resources.Get "js/main.js" }}
 {{ $js := slice $vendor $main | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint }}
-<script src="{{ $js.Permalink }}"></script>
+<script src="{{ $js.Permalink }}" defer></script>
