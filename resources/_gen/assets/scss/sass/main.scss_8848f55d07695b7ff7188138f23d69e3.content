@@ -1,9 +1,0 @@
-body {
-  background: red;
-}
-
-// @import '01-base/fonts';
-@import '01-base/mixins';
-@import '01-base/normalize';
-// @import '01-base/fonts';
-@import '01-base/base';

@@ -1,42 +1,18 @@
-{{/* get file that matches the filename as specified as src="" in shortcode */}}
-{{ $src := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) }}
-
-{{/* set image sizes, these are hardcoded for now, x dictates that images are resized to this width */}}
-
-{{ $smallw := default "900x" }}
-{{ $mediumw := default "1200x" }}
-{{ $largew := default "1600x" }}
-
-{{/* resize the src image to the given sizes */}}
-
-{{ .Scratch.Set "small" ($src.Resize $smallw) }}
-{{ .Scratch.Set "medium" ($src.Resize $mediumw) }}
-{{ .Scratch.Set "large" ($src.Resize $largew) }}
-
-{{/* add the processed images to the scratch */}}
-
-{{ $small := .Scratch.Get "small" }}
-{{ $medium := .Scratch.Get "medium" }}
-{{ $large := .Scratch.Get "large" }}
-
-{{/* only use images smaller than or equal to the src (original) image size, as Hugo will upscale small images */}}
-{{/* set the sizes attribute to (min-width: 35em) 1200px, 100vw unless overridden in shortcode */}}
-
-<img 
-  {{ with .Get "sizes" }}sizes='{{.}}'{{ else }}sizes="100vw"{{ end }}
-  srcset='
-  {{ if ge $src.Width "900" }}
-    {{ with $large.RelPermalink }}, {{.}} 900w{{ end }}
+<!-- image -->
+<figure {{ with .Get "class" }}class="{{.}}"{{ end }}>
+  {{ with .Get "link"}}<a href="{{.}}">{{ end }}
+      <img src="{{ .Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}"{{ end }} loading="lazy" />
+  {{ if .Get "link"}}</a>{{ end }}
+  {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr")}}
+  <figcaption>{{ if isset .Params "title" }}
+      <h4>{{ .Get "title" }}</h4>{{ end }}
+      {{ if or (.Get "caption") (.Get "attr")}}<p>
+      {{ .Get "caption" }}
+      {{ with .Get "attrlink"}}<a href="{{.}}"> {{ end }}
+          {{ .Get "attr" }}
+      {{ if .Get "attrlink"}}</a> {{ end }}
+      </p> {{ end }}
+  </figcaption>
   {{ end }}
-  {{ if ge $src.Width "1200" }}
-    {{ with $large.RelPermalink }}, {{.}} 1200w{{ end }}
-  {{ end }}
-  {{ if ge $src.Width "1600" }}
-    {{ with $large.RelPermalink }}, {{.}} 1600w {{ end }}
-  {{ end }}'
-  {{ if .Get $medium }}
-    src="{{ $large.RelPermalink }}" 
-  {{ else }}
-    src="{{ $src.RelPermalink }}" 
-  {{ end }}
-  {{ with .Get "alt" }}alt='{{.}}'{{ end }}>
+</figure>
+<!-- image -->
