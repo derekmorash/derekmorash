@@ -11,7 +11,7 @@ draft = false
 +++
 
 ## Contact
-- Email [derek.morash@gmail.com](derek.morash@gmail.com)
+- Email [derek.morash@gmail.com](mailto:derek.morash@gmail.com)
 - Twitter [@derek_morash](https://twitter.com/derek_morash)
 - Instagram [gammastop](https://www.instagram.com/gammastop/)
 - Codepen [derekmorash](https://codepen.io/derekmorash/)
