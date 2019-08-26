@@ -42,7 +42,14 @@
     margin: 2rem 0;
     text-align: center;
 
-    img {
+    picture {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    img,
+    source {
       display: inline-block;
       max-width: 100%;
       margin: 0 auto;
