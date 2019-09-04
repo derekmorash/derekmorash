@@ -1,26 +1,54 @@
 <!-- image -->
+{{ $alt := .Get "alt" }}
+{{ $caption := .Get "caption" }}
+{{ $title := .Get "title" }}
+{{ $attr := .Get "attr" }}
+{{ $attrlink := .Get "attrlink" }}
+
 <figure {{ with .Get "class" }}class="{{.}}"{{ end }}>
     
   {{ with .Get "link"}}<a href="{{.}}">{{ end }}
 
-    <picture>
-      {{ $src := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) }}
-      <source srcset="{{ $src.RelPermalink }}" type="{{ $src.MediaType }}">
-      <img src="{{ $src.RelPermalink }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}"{{ end }} loading="lazy" />
+    <!-- { { $src := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) }} -->
+    {{ $src_match := (print "**/" (.Get "src") ".*") }}
+    {{ $src := .Page.Resources.Match $src_match }}
+    {{ $img_scratch := newScratch }}
+    {{ $img_scratch.Set "src_fallback" "" }}
+
+    <picture data-src-match="{{ $src_match }}">
+
+      {{ with $src }}
+
+        {{ range . }}
+          <source srcset="{{ .RelPermalink }}" type="{{ .MediaType }}">
+
+          {{ if or (eq .MediaType.SubType "jpg") (eq .MediaType.SubType "png") (eq ($img_scratch.Get "src_fallback") "") }}
+            {{ $img_scratch.Set "src_fallback" .RelPermalink }}
+          {{ end }}
+        {{ end }}
+
+        {{ if not (eq ($img_scratch.Get "src_fallback") "") }}
+          {{ $src_fallback := $img_scratch.Get "src_fallback" }}
+          <img src="{{ $src_fallback }}" {{ if or $alt $caption }}alt="{{ with $alt }}{{.}}{{else}}{{ $caption }}{{ end }}"{{ end }} loading="lazy" />
+        {{ end }}
+      {{ end }}
+      
     </picture>
 
   {{ if .Get "link"}}</a>{{ end }}
 
 
-  {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr")}}
-  <figcaption>{{ if isset .Params "title" }}
-    <h4>{{ .Get "title" }}</h4>{{ end }}
-    {{ if or (.Get "caption") (.Get "attr")}}<p>
-    {{ .Get "caption" }}
-    {{ with .Get "attrlink"}}<a href="{{.}}"> {{ end }}
-      {{ .Get "attr" }}
-    {{ if .Get "attrlink"}}</a> {{ end }}
-    </p> {{ end }}
+  {{ if or (or $title $caption) $attr}}
+  <figcaption>
+    {{ if isset .Params "title" }}<h4>{{ $title }}</h4>{{ end }}
+    {{ if or $caption $attr}}
+      <p>
+        {{ $caption }}
+        {{ with $attrlink}}<a href="{{.}}"> {{ end }}
+          {{ $attr }}
+        {{ if $attrlink}}</a> {{ end }}
+      </p> 
+    {{ end }}
   </figcaption>
   {{ end }}
 </figure>
