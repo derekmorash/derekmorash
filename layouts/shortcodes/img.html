@@ -19,7 +19,7 @@
 
       {{ with $src }}
 
-        {{ range . }}
+        {{ range sort $src "RelPermalink" "desc" }}
           <source srcset="{{ .RelPermalink }}" type="{{ .MediaType }}">
 
           {{ if or (eq .MediaType.SubType "jpg") (eq .MediaType.SubType "png") (eq ($img_scratch.Get "src_fallback") "") }}
