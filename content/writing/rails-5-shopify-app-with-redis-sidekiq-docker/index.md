@@ -197,7 +197,7 @@ Log into your Shopify Partners dashboard to create a new app. Click here to [bec
 
 Find the apps link in the dashboard on the left then click create app. You'll get a popup like this.
 
-{{< img src="images/shopify-dashboard-create-app.png" alt="Create app prompt for shopify dashboard" caption="Create app prompt for shopify dashboard" >}}
+{{< img src="shopify-dashboard-create-app" alt="Create app prompt for shopify dashboard" caption="Create app prompt for shopify dashboard" >}}
 
 Here you will give the app a name, and the URL for your new local app. The URL is the forwarding address that was created in the previous step by ngrok.
 
@@ -291,7 +291,7 @@ Now that everything is configured we can build our containers and get them up an
 
 With ngrok running and all containers up you should be able to open the ngrok forwarding URL in a browser and see the _"Yay! You're on Rails!"_ screen.
 
-{{< img src="images/welcome-to-rails.jpg" alt="You're on Rails!" caption="You're on Rails!" >}}
+{{< img src="welcome-to-rails" alt="You're on Rails!" caption="You're on Rails!" >}}
 
 ## 7. Shopify app gem setup
 
@@ -332,7 +332,7 @@ There are just a few things left to do to turn our Rails app into a Shopify app.
 
 With ngrok running and all containers up you should be able to open the ngrok forwarding URL in a browser and see the shopify app install screen.
 
-{{< img src="images/app-install.png" alt="App install screen" caption="App install screen" >}}
+{{< img src="app-install" alt="App install screen" caption="App install screen" >}}
 
 
 ## Helpful commands
