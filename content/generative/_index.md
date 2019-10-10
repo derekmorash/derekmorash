@@ -7,3 +7,4 @@ title = "Generative"
   [menu.main]
     weight = 2
 +++
+generative

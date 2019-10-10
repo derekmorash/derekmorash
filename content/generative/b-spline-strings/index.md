@@ -1,5 +1,6 @@
 ---
 title: "B Spline Strings"
+categories: ["Sketch"]
 description: "A B Spline system for creating string like images."
 featured_image: "images/featured-image-crop-resize.jpg"
 date: 2019-7-28T23:53:34-04:00

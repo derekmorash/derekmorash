@@ -1,5 +1,6 @@
 ---
 title: "B Spline"
+categories: ["Sketch"]
 description: "Generative design created using a B Spline, a mathematics concept of using nodes to control the curve of a line."
 featured_image: "images/featured-image.jpg"
 date: 2019-7-28
