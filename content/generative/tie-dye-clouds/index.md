@@ -12,7 +12,7 @@ One of my favourite techniques for creating generative graphics are flow fields 
 
 In this case I'm using each pixel on the canvas as point in the vector field. Taking each pixels vector position I'm setting it's colour based on a series of calculations and noise.
 
-Here's a series of outputs showing my progress to get 
+Here's a series of outputs showing my progress to get from a basic noise field to a more interesting design.
 
 {{< img src="swirl-1" alt="Tie Dye Clouds generative graphics" >}}
 
