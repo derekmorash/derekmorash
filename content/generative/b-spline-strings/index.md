@@ -1,11 +1,11 @@
----
-title: "B Spline Strings"
-categories: ["Sketch"]
-description: "A B Spline system for creating string like images."
-featured_image: "images/featured-image-crop-resize.jpg"
-date: 2019-7-28T23:53:34-04:00
-# draft: true
----
++++
+title = "B Spline Strings"
+categories = ["Sketch"]
+description = "A B Spline system for creating string like images."
+featured_image = "images/featured-image-crop-resize.jpg"
+date = 2019-07-28T12:05:46-03:00
+draft = false
++++
 {{< img src="bspline-strings-01" alt="Horizontal B Spline." caption="Horizontal B Spline" >}}
 
 B Spline system for creating string like images.

@@ -1,5 +1,6 @@
 ---
 title: "HTML5 Canvas Tag Intro"
+categories: ["Creative Coding"]
 description: "This is a walk through/tutorial on the basics of the HTML5 Canvas Tag."
 date: 2016-01-20
 ---

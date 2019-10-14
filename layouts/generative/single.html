@@ -16,13 +16,10 @@
 
       <h1 class="blog-post__title">{{ .Page.Title }}</h1>
 
-      {{/*  <aside class="blog-post__metadata">
+      <aside class="blog-post__metadata">
         <!-- <p class="blog-post__reading-time">Estimated reading time <span>{{ .Page.ReadingTime }} minutes</span></p> -->
         <p class="blog-post__date">Posted on <time datetime="{{ .PublishDate.Format "2006-01-02" }}">{{ .PublishDate.Format "January 2, 2006" }}</time></p>
-        <p>Date: {{ .Date }}<br />PublishDate: {{ .PublishDate }}<br />Lastmod: {{ .Lastmod }} <br>params date: {{ .Params.date }}<br>
-          custom_date: {{ .Params.custom_date }}</p>
-        <p>Description: {{ .Params.description }}</p>
-      </aside>  */}}
+      </aside>
     </header>
 
     <section class="blog-post__content rte">

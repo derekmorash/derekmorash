@@ -1,11 +1,9 @@
 +++
-custom_date = '2019-8-11'
 title = "Terrain Mesh"
 categories = ["Sketch"]
-description = "A B Spline system for creating string like images."
+description = "Noise generated terrain mesh"
 featured_image = "images/featured-image.png"
-date = '2019-8-11'
-publishDate = '2019-8-11'
+date = 2019-08-11T12:03:04-03:00
 draft = false
 +++
 {{< img src="flow1" alt="B Spline horizontal strings" caption="B Spline horizontal strings" >}}
