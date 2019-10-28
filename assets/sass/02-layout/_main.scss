@@ -15,7 +15,6 @@
 
 
 .page-header {
-  @extend .nunito;
   max-width: 36rem;
   margin: 0 auto;
   padding: 2rem 0;
@@ -43,7 +42,6 @@
 }
 
 .page-header__categories {
-  @extend .nunito;
   margin: 0.5rem 0;
   color: $c-primary;
   font-size: 0.75rem;
@@ -74,16 +72,13 @@
 
 
 .blog-list__header {
-  @extend .nunito;
-  max-width: 36rem;
   margin: 0 auto;
   padding: 1rem 0;
-  text-align: center;
+  border-top: solid 2px $c-black;
 }
 
 .blog-list__title {
   margin: 1rem 0;
-  color: $c-primary;
   font-size: 1.25rem;
   line-height: 1.1;
 

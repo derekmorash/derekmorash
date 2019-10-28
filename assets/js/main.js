@@ -3,13 +3,18 @@
 
   window.derek.fonts = [
     {
-      "family": "Noto Serif",
+      "family": "IBM Plex Sans",
       "weight": 400,
       "style": "normal"
     },
     {
-      "family": "Nunito",
-      "weight": 600,
+      "family": "IBM Plex Sans",
+      "weight": 700,
+      "style": "normal"
+    },
+    {
+      "family": "IBM Plex Mono",
+      "weight": 400,
       "style": "normal"
     }
   ];

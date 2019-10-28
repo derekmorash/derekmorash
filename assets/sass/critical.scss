@@ -25,7 +25,8 @@ html {
 }
 
 body {
-  @extend .noto;
+  font-family: $f-primary-fallback;
+  font-weight: $f-weight-primary-regular;
   font-size: 1rem;
   font-style: normal;
   letter-spacing: 0.01em;
@@ -33,6 +34,10 @@ body {
   background: $c-white;
   color: $c-text;
   overflow-x: hidden;
+
+  .ibm-plex-sans-loaded & {
+    font-family: $f-primary;
+  }
 }
 
 p {
@@ -70,11 +75,14 @@ h3,
 h4,
 h5,
 h6 {
-  @extend .nunito;
   margin: 2.5em 0 0.75rem;
   line-height: 1.3;
   // letter-spacing: -0.03em;
   color: $c-heading;
+
+  .ibm-plex-sans-loaded & {
+    font-weight: $f-weight-primary-bold;
+  }
 }
 
 h1 {
@@ -116,7 +124,12 @@ img {
 
 pre,
 code {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: $f-mono-fallback;
+  font-weight: $f-weight-mono-regular;
+
+  .ibm-plex-mono-loaded & {
+    font-family: $f-mono;
+  }
 }
 
 pre {

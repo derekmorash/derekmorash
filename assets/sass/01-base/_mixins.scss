@@ -58,21 +58,3 @@
   padding: 0;
   list-style: none;
 }
-
-.noto {
-  font-family: $f-primary-fallback;
-  font-weight: $f-weight-primary-regular;
-
-  html.noto-serif-loaded & {
-    font-family: $f-primary;
-  }
-}
-
-.nunito {
-  font-family: $f-secondary-fallback;
-  font-weight: $f-weight-secondary-regular;
-
-  html.nunito-loaded & {
-    font-family: $f-secondary;
-  }
-}

@@ -19,10 +19,15 @@
     </header>
     <ul class="blog-list">
       <!-- Ranges through content/blog/*.md -->
-      {{ range first 3 ( where .Site.RegularPages "Type" "generative" ) }}
+      {{ range first 4 ( where .Site.RegularPages "Type" "generative" ) }}
         <li class="blog-list__item">
           <article class="blog-list__item-article" itemscope itemType="http://schema.org/BlogPosting">
             <a class="blog-list__item-link" href="{{.RelPermalink}}" title="Read: {{ .Title }}.">
+              {{ if .Params.categories }}
+                <p class="blog-list__item-categories">
+                  {{ range $i, $cat := .Params.categories }}{{ if $i }}, {{ end }}{{ $cat }}{{ end }}
+                </p>
+              {{ end }}
             
               <figure class="blog-list__item-figure">
                 
@@ -34,11 +39,7 @@
                   <img src="{{ $placeholder }}" alt="{{ .Title }}" class="blog-list__item-image">
                 {{ end }}
               </figure>
-              {{ if .Params.categories }}
-                <p class="blog-list__item-categories">
-                  {{ range $i, $cat := .Params.categories }}{{ if $i }}, {{ end }}{{ $cat }}{{ end }}
-                </p>
-              {{ end }}
+
               <h2 class="blog-list__item-title">{{ .Title }}</h2>
               <p class="blog-list__item-summary">
                 {{ if .Description }}
@@ -60,10 +61,16 @@
     </header>
     <ul class="blog-list">
       <!-- Ranges through content/blog/*.md -->
-      {{ range first 3 ( where .Site.RegularPages "Type" "writing" ) }}
+      {{ range first 4 ( where .Site.RegularPages "Type" "writing" ) }}
         <li class="blog-list__item">
           <article class="blog-list__item-article" itemscope itemType="http://schema.org/BlogPosting">
             <a class="blog-list__item-link" href="{{.RelPermalink}}" title="Read: {{ .Title }}.">
+              {{ if .Params.categories }}
+                <p class="blog-list__item-categories">
+                  {{ range $i, $cat := .Params.categories }}{{ if $i }}, {{ end }}{{ $cat }}{{ end }}
+                </p>
+              {{ end }}
+
               {{/*  <figure class="blog-list__item-figure">
   
                 {{ $featured_image := resources.Get "images/blog-placeholder.jpg" }}
@@ -74,11 +81,7 @@
                 {{ end }}
   
               </figure>  */}}
-              {{ if .Params.categories }}
-                <p class="blog-list__item-categories">
-                  {{ range $i, $cat := .Params.categories }}{{ if $i }}, {{ end }}{{ $cat }}{{ end }}
-                </p>
-              {{ end }}
+
               <h2 class="blog-list__item-title">{{ .Title }}</h2>
               <p class="blog-list__item-summary">
                 {{ if .Description }}

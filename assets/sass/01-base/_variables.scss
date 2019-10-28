@@ -45,14 +45,14 @@ $c-link: $c-primary;
 // $f-weight-primary-regular: 400;
 // $f-weight-primary-bold: 600;
 
-$f-primary-fallback: serif;
-$f-primary: 'Noto Serif', #{$f-primary-fallback};
+$f-primary-fallback: sans-serif;
+$f-primary: 'IBM Plex Sans', #{$f-primary-fallback};
 $f-weight-primary-regular: 400;
+$f-weight-primary-bold: 700;
 
-$f-secondary-fallback: sans-serif;
-$f-secondary: 'Nunito', #{$f-secondary-fallback};
-$f-weight-secondary-regular: 600;
-
+$f-mono-fallback: 'Courier New', Courier, monospace;;
+$f-mono: 'IBM Plex Mono', #{$f-mono-fallback};
+$f-weight-mono-regular: 400;
 
 // ::-moz-selection { background: $c-primary; color: $c-white; text-shadow: none; }
 // ::selection { background: $c-primary; color: $c-white; text-shadow: none; }

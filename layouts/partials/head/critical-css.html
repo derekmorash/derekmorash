@@ -1,26 +1,42 @@
 {{ $critical := resources.Get "sass/critical.scss" | resources.ToCSS | resources.Minify }}
 
-<link href="https://fonts.googleapis.com/css?family=Noto+Serif|Nunito:600&display=swap" rel="stylesheet">
+{{ $IBMPlexMonoRegularWoff2 := resources.Get "fonts/IBMPlexMono-Regular.woff2" | resources.Fingerprint }}
+{{ $IBMPlexMonoRegularWoff := resources.Get "fonts/IBMPlexMono-Regular.woff" | resources.Fingerprint }}
+{{ $IBMPlexSansRegularWoff2 := resources.Get "fonts/IBMPlexSans-Regular.woff2" | resources.Fingerprint }}
+{{ $IBMPlexSansRegularWoff := resources.Get "fonts/IBMPlexSans-Regular.woff" | resources.Fingerprint }}
+{{ $IBMPlexSansBoldWoff2 := resources.Get "fonts/IBMPlexSans-Bold.woff2" | resources.Fingerprint }}
+{{ $IBMPlexSansBoldWoff := resources.Get "fonts/IBMPlexSans-Bold.woff" | resources.Fingerprint }}
 
-<!-- {{ $InterRegularWoff2 := resources.Get "fonts/Inter-Regular.woff2" | resources.Fingerprint }}
-{{ $InterRegularWoff := resources.Get "fonts/Inter-Regular.woff" | resources.Fingerprint }}
-{{ $InterSemiBoldWoff2 := resources.Get "fonts/Inter-SemiBold.woff2" | resources.Fingerprint }}
-{{ $InterSemiBoldWoff := resources.Get "fonts/Inter-SemiBold.woff" | resources.Fingerprint }} -->
 <style>
-  /* @font-face {
-    font-family: 'Inter';
-    font-style:  normal;
-    font-weight: 400;
-    src: url("{{ $InterRegularWoff2.Permalink }}") format("woff2"),
-        url("{{ $InterRegularWoff2.Permalink }}") format("woff");
-  }
   @font-face {
-    font-family: 'Inter';
-    font-style:  normal;
-    font-weight: 600;
-    src: url("{{ $InterSemiBoldWoff2.Permalink }}") format("woff2"),
-        url("{{ $InterSemiBoldWoff.Permalink }}") format("woff");
-  } */
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: local('IBM Plex Mono'),
+      local('IBMPlexMono'),
+      url('{{ $IBMPlexMonoRegularWoff2.Permalink }}') format('woff2'),
+      url("{{ $IBMPlexMonoRegularWoff.Permalink }}") format("woff");
+  }
+
+  @font-face {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('IBM Plex Sans'),
+      local('IBMPlexSans'),
+      url('{{ $IBMPlexSansRegularWoff2.Permalink }}') format('woff2'),
+      url("{{ $IBMPlexSansRegularWoff.Permalink }}") format("woff");
+  }
+
+  @font-face {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('IBM Plex Sans Bold'),
+      local('IBMPlexSans-Bold'),
+      url('{{ $IBMPlexSansBoldWoff2.Permalink }}') format('woff2'),
+      url("{{ $IBMPlexSansBoldWoff.Permalink }}") format("woff");
+  }
 
   {{ $critical.Content | safeCSS }}
 </style>
