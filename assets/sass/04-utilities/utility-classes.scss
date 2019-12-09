@@ -1,0 +1,7 @@
+.visually-hidden, .screen-reader-only {
+  @include visually-hidden;
+}
+
+.visually-shown {
+  @include visually-shown;
+}

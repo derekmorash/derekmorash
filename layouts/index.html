@@ -2,18 +2,14 @@
 
 <main id="site-main" class="site-main">
 
-  <article class="home-intro">
-    <h1 class="home-intro__title">{{ .Title }}</h1>
-    {{/*  <figure class="home-intro__figure">
-      {{ $homeIntro := resources.Get "images/home-intro.jpg" }}
-      <img src="{{ $homeIntro.Permalink }}" alt="{{ .Title }}" class="home-intro__image">
-    </figure>  */}}
-    <div class="rte home-intro__body">
+  <header class="home-intro">
+    <div class="rte home-intro__summary">
+      <h1 class="home-intro__title">{{ .Title }}</h1>
       {{ .Content }}
     </div>
-  </article>
+  </header>
 
-  <article class="blog">
+  <section class="blog">
     <header class="blog-list__header">
       <h2 class="blog-list__title">Generative</h2>
     </header>
@@ -53,9 +49,9 @@
         </li>
       {{ end }}
     </ul>
-  </article>
+  </section>
 
-  <article class="blog">
+  <section class="blog">
     <header class="blog-list__header">
       <h2 class="blog-list__title">Writing</h2>
     </header>
@@ -95,7 +91,7 @@
         </li>
       {{ end }}
     </ul>
-  </article>
+  </section>
   
 </main>
  

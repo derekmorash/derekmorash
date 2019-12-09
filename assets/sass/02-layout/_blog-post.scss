@@ -8,6 +8,15 @@
 
 .blog-post__header {
   @extend .page-header;
+
+  @media (min-width: 900px) {
+    grid-template-columns: minmax(max-content, 15%) 1fr;
+    // grid-template-columns: fit-content(10%) 1fr;
+  }
+}
+
+.blog-post__summary {
+  @extend .page-header__summary;
 }
 
 .blog-post__title {
@@ -36,5 +45,5 @@
 }
 
 .blog-post__content {
-  @extend .page-header__content;
+  @extend .page__content;
 }
