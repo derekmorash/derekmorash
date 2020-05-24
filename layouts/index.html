@@ -4,7 +4,6 @@
 
   <header class="home-intro">
     <div class="rte home-intro__summary">
-      <h1 class="home-intro__title">{{ .Title }}</h1>
       {{ .Content }}
     </div>
   </header>
@@ -16,7 +15,7 @@
     <ul class="blog-list">
       <!-- Ranges through content/blog/*.md -->
       {{ range first 4 ( where .Site.RegularPages "Type" "generative" ) }}
-        <li class="blog-list__item">
+        <li class="blog-list__item blog-list__item--generative">
           <article class="blog-list__item-article" itemscope itemType="http://schema.org/BlogPosting">
             <a class="blog-list__item-link" href="{{.RelPermalink}}" title="Read: {{ .Title }}.">
               {{ if .Params.categories }}

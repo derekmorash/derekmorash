@@ -7,12 +7,10 @@
 }
 
 .blog-post__header {
+  @extend %site-padding;
   @extend .page-header;
-
-  @media (min-width: 900px) {
-    grid-template-columns: minmax(max-content, 15%) 1fr;
-    // grid-template-columns: fit-content(10%) 1fr;
-  }
+  max-width: 56rem;
+  margin: 0 auto;
 }
 
 .blog-post__summary {
@@ -25,6 +23,14 @@
 
 .blog-post__categories {
   @extend .page-header__categories;
+
+  &.blog-post__categories--writing {
+    color: $c-primary;
+  }
+
+  &.blog-post__categories--generative {
+    color: $c-secondary;
+  }
 }
 
 .blog-post__metadata {
@@ -45,5 +51,6 @@
 }
 
 .blog-post__content {
+  @extend %site-padding;
   @extend .page__content;
 }

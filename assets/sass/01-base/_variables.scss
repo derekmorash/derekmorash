@@ -1,18 +1,18 @@
 // Theme Colours
 // =============
-$c-primary: #62c08e;
+$c-primary: #00cad1; //#1FBCD2;//#37d2cf;//#00b9f1;
 $c-primary-light: desaturate($c-primary, 10);
 $c-primary-dark: saturate($c-primary, 10);
 
-$c-secondary: #c06d62;
+$c-secondary: #fed134; //#ffc107;//#f9c00c;
 $c-secondary-light: desaturate($c-secondary, 10);
 $c-secondary-dark: saturate($c-secondary, 10);
 
-$c-tertiary: #c09c62;
+$c-tertiary: #b8b3ff; //#6740B4;//#7200da;
 $c-tertiary-light: desaturate($c-tertiary, 10);
 $c-tertiary-dark: saturate($c-tertiary, 10);
 
-$c-quaternary: #7862c0;
+$c-quaternary: #ff0a3b; //#F1453D;//#f9320c;
 $c-quaternary-light: desaturate($c-quaternary, 10);
 $c-quaternary-dark: saturate($c-quaternary, 10);
 
@@ -21,22 +21,30 @@ $c-quaternary-dark: saturate($c-quaternary, 10);
 $c-white: #FFF;
 $c-black: #000;
 
-$c-grey-100: #F6F6F6;
-$c-grey-200: #E0E0E0;
-$c-grey-300: #C3C3C3;
-$c-grey-400: #A6A6A6;
-$c-grey-500: #909090;
-$c-grey-600: #737373;
-$c-grey-700: #565656;
-$c-grey-800: #404040;
-$c-grey-900: #262626;
-$c-grey-1000: #101010;
+$c-grey: #6A6C82;//#8A8A8A;
+$c-grey-100: lighten($c-grey, 38%);//#F6F6F6;
+$c-grey-200: lighten($c-grey, 24%);//#E0E0E0;
+$c-grey-300: lighten($c-grey, 16%);//#C3C3C3;
+$c-grey-400: lighten($c-grey, 8%);//#A6A6A6;
+$c-grey-500: $c-grey;//#909090;
+$c-grey-600: darken($c-grey, 8%);//#737373;
+$c-grey-700: darken($c-grey, 16%);//#565656;
+$c-grey-800: darken($c-grey, 24%);//#404040;
+$c-grey-900: darken($c-grey, 32%);//#262626;
+$c-grey-1000: darken($c-grey, 40%);//#101010;
 
 // Text
 // ========
-$c-text: $c-grey-900;
-$c-heading: $c-black;
+$c-text: $c-grey-100;
+$c-heading: $c-grey-100;
 $c-link: $c-primary;
+
+
+$c-background: $c-grey-1000;
+
+// Sizes
+// =====
+$s-header-height: 3rem;
 
 // Fonts
 // =====
@@ -54,6 +62,6 @@ $f-mono-fallback: 'Courier New', Courier, monospace;;
 $f-mono: 'IBM Plex Mono', #{$f-mono-fallback};
 $f-weight-mono-regular: 400;
 
-// ::-moz-selection { background: $c-primary; color: $c-white; text-shadow: none; }
-// ::selection { background: $c-primary; color: $c-white; text-shadow: none; }
+::-moz-selection { background: $c-primary; color: $c-white; text-shadow: none; }
+::selection { background: $c-primary; color: $c-white; text-shadow: none; }
 

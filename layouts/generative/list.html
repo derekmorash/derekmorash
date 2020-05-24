@@ -3,14 +3,17 @@
 <main id="site-main" class="site-main">
 
   <article class="blog">
-    <header class="blog-list__header">
-      <h1 class="blog-list__title">{{ .Title }}</h1>
+
+    <header class="blog-intro">
+      <div class="rte blog-intro__summary">
+        <h1 class="blog-intro__title">{{ .Title }}</h1>
+      </div>
     </header>
 
     <ul class="blog-list">
       <!-- Ranges through content/blog/*.md -->
       {{ range (.Paginator 9).Pages }}  
-        <li class="blog-list__item" itemscope itemType="http://schema.org/BlogPosting">
+        <li class="blog-list__item blog-list__item--generative" itemscope itemType="http://schema.org/BlogPosting">
           <a class="blog-list__item-link" href="{{.RelPermalink}}" title="Read: {{ .Title }}.">
             {{ if .Params.categories }}
               <p class="blog-list__item-categories">

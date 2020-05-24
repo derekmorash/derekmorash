@@ -4,7 +4,7 @@
 
     code {
       display: inline;
-      background-color: $c-grey-100;
+      background-color: $c-grey-900;
       word-break: break-word;
 
       @media (min-width: 600px) {
@@ -21,7 +21,7 @@
   h4,
   h5,
   h6 {
-    margin-top: 2rem;
+    // margin-top: 2rem;
 
     &:before {
       content: '';
@@ -84,51 +84,20 @@
 .highlight {
   display: block;
   margin: 2.5rem 0;
-  border-top: solid 2px $c-primary;
-  border-bottom: solid 2px $c-primary;
+  border-left: solid 2px $c-primary;
+  background-color: $c-grey-900;
   overflow: hidden;
 
   pre {
     margin: 0;
-    padding: 1rem;
+    padding: 0.5rem;
     overflow-x: auto;
-
-    code {
-
-    }
   }
 
   @media (min-width: 600px) {
-    position: relative;
-    left: 50%;
-    right: 50%;
-    display: flex;
-    justify-content: center;
-    width: calc(100vw - 7rem);
-    max-width: calc(100vw - 7rem);
-    margin-left: calc(-50vw + 3.5rem);
-    margin-right: calc(-50vw + 3.5rem);
 
     pre {
-      padding: 1.75rem;
-  
-      code {
-  
-      }
+      padding: 1rem 1.75rem;
     }
   }
-  
-  @media (min-width: 900px) {
-    width: calc(100vw - 9rem);
-    max-width: calc(100vw - 9rem);
-    margin-left: calc(-50vw + 4.5rem);
-    margin-right: calc(-50vw + 4.5rem);
-  }
-
-  // @media (min-width: 1200px) {
-  //   width: calc(100vw - 4rem);
-  //   max-width: calc(100vw - 4rem);
-  //   margin-left: calc(-50vw + 2rem);
-  //   margin-right: calc(-50vw + 2rem);
-  // }
 }

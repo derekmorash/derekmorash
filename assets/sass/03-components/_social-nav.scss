@@ -17,8 +17,7 @@
 
   &:hover,
   &:hover:visited {
-    color: $c-heading;
-    text-decoration: underline;
-    text-decoration-color: $c-link;
+    color: $c-primary;
+    text-decoration: none;
   }
 }

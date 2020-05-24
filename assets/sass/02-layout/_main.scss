@@ -1,64 +1,68 @@
 .site-main {
-  max-width: 75rem;
-  padding: 0 1.5rem 1.5rem;
+  max-width: none;
+  padding: 0;
+  // padding: 0 1.5rem 1rem;
   
-  @media (min-width: 500px) {
-    padding: 0 2.5rem 2.5rem;
-  }
-  @media (min-width: 600px) {
-    padding: 0 3.5rem 3.5rem;
-  }
-  @media (min-width: 900px) {
-    padding: 0 4.5rem 4.5rem;
-  }
+  // @media (min-width: 500px) {
+  //   padding: 0 1.5rem 2.5rem;
+  // }
+  // @media (min-width: 600px) {
+  //   padding: 0 2.5rem 3.5rem;
+  // }
+  // @media (min-width: 900px) {
+  //   padding: 0 2.5rem 4.5rem;
+  // }
+  // @media (min-width: 1200px) {
+  //   padding: $s-header-height 2.5rem 4.5rem;
+  // }
+  // @media (min-width: 1400px) {
+  //   padding: $s-header-height 3.5rem 4.5rem;
+  // }
+  // @media (min-width: 1800px) {
+  //   padding: $s-header-height 4.5rem 4.5rem;
+  // }
 }
 
 
 .page-header {
-  // max-width: 36rem;
-  // margin: 0 auto;
-  padding: 2rem 0;
+  padding-top: 10rem;
+  padding-top: clamp(6rem, 30vh, 12rem);
+  padding-bottom: 2rem;
   text-align: left;
 
-  @media (min-width: 900px) {
-    display: grid;
-    grid-template-columns: 1fr 40%;
-    column-gap: 1.5rem;
-    padding: 3rem 0;
+  @media (min-width: 1200px) {
+    padding-top: $s-header-height + 10rem;
+    padding-top: clamp($s-header-height + 6rem, 50vh, $s-header-height + 12rem);
   }
 }
 
 .page-header__summary {
+  // max-width: 45rem;
+  font-size: 2rem;
   text-align: left;
 
-  @media (min-width: 900px) {
+  @media (min-width: 1200px) {
+    grid-column: span 3;
+    // width: 55%;
+    font-size: 3rem;
   }
 }
 
 .page-header__title {
   margin: 0;
-  margin-top: -0.125em;
   font-size: 2rem;
-  // line-height: 0.875;
-
-  @media (min-width: 900px) {
-    font-size: 2.5rem;
-  }
 
   @media (min-width: 1200px) {
-    font-size: 2.75rem;
+    font-size: 3rem;
   }
 }
 
 .page-header__metadata {
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
+  margin: 0 0 1rem;
   font-size: 1rem;
 
   @media (min-width: 900px) {
     padding-right: 1.5rem;
-    border-right: solid 0.25rem $c-black;
   }
 }
 
@@ -75,6 +79,12 @@
 
 .page-header__date {
   margin: 0;
+  font-family: $f-mono-fallback;
+  font-weight: $f-weight-mono-regular;
+
+  .ibm-plex-mono-loaded & {
+    font-family: $f-mono;
+  }
 
   // time {
   //   display: block;
@@ -90,7 +100,7 @@
 .blog-list__header {
   margin: 0 auto;
   padding: 1rem 0;
-  border-top: solid 2px $c-black;
+  border-top: solid 2px $c-grey-100;
 }
 
 .blog-list__title {

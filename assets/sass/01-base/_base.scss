@@ -2,3 +2,79 @@
   display: block;
   width: 100%;
 }
+
+label {
+  font-family: $f-mono;
+  font-weight: $f-weight-mono-regular;
+  text-transform: uppercase;
+}
+
+input[type=text],
+input[type=number],
+input[type=email],
+input[type=date],
+input[type=tel],
+input[type=search],
+select {
+  padding: 0.5em 0.25em;
+  border: 0;
+  font-family: $f-mono;
+  font-weight: $f-weight-mono-regular;
+  background-color: $c-grey-100;
+
+  &:active,
+  &:focus {
+    outline: solid 2px $c-primary;
+  }
+}
+
+.button,
+button,
+input[type=submit],
+input[type=button] {
+  @include button();
+  padding: 1em 2em;
+  background-color: $c-grey-100;
+  border: 0;
+  color: $c-black;
+  font-family: $f-mono;
+  font-weight: $f-weight-mono-regular;
+  text-decoration: none;
+  transition: background-color 0.1s;
+
+  &:hover,
+  &:hover:visited {
+    background-color: $c-primary;
+    color: $c-black;
+  }
+
+  &.button--primary {
+    background-color: $c-primary;
+    
+    &:hover,
+    &:hover:visited {
+      background-color: $c-primary-dark;
+      color: $c-black;
+    }
+  }
+
+  &.button--secondary {
+    background-color: $c-secondary;
+    
+    &:hover,
+    &:hover:visited {
+      background-color: $c-secondary-dark;
+      color: $c-black;
+    }
+  }
+
+  &.button--tertiary {
+    background-color: $c-tertiary;
+    
+    &:hover,
+    &:hover:visited {
+      background-color: $c-tertiary-dark;
+      color: $c-black;
+    }
+  }
+}

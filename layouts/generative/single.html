@@ -4,22 +4,19 @@
   <article role="main" class="blog-post">
     <header class="blog-post__header">
       <aside class="blog-post__metadata">
-          {{/*  {{ if .Params.categories }}
-            <p class="blog-post__categories">
-              {{ range .Params.categories }}
-                {{ . }}
-              {{ end }}
-            </p>
-          {{ end }}  */}}
-          <!-- <p class="blog-post__reading-time">Estimated reading time <span>{{ .Page.ReadingTime }} minutes</span></p> -->
-          <p class="blog-post__date"><span class="screen-reader-only">Posted on </span><time datetime="{{ .PublishDate.Format "2006-01-02" }}">{{ .PublishDate.Format "January 2, 2006" }}</time></p>
-      </aside>
-      <div class="blog-post__summary">
+        {{/*  {{ if .Params.categories }}
+          <p class="blog-post__categories">
+            {{ range .Params.categories }}
+              {{ . }}
+            {{ end }}
+          </p>
+        {{ end }}  */}}
   
-        <h1 class="blog-post__title">{{ .Page.Title }}</h1>
-    
-        <p class="blog-post__categories">{{ .Type }}</p>
-      </div>
+        <p class="blog-post__categories blog-post__categories--{{ .Type | urlize }}">{{ .Type }}</p>
+        <p class="blog-post__date"><span class="screen-reader-only">Posted on </span><time datetime="{{ .PublishDate.Format "2006-01-02" }}">{{ .PublishDate.Format "January 2, 2006" }}</time></p>
+      </aside>
+
+      <h1 class="blog-post__title">{{ .Page.Title }}</h1>
     </header>
 
     <section class="blog-post__content rte">
