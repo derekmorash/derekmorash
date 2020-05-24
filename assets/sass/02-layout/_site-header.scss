@@ -1,7 +1,7 @@
 .site-header {
   @extend %site-padding;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.25rem;
   background-color: $c-background;
 
   @media (min-width: 1200px) {
@@ -13,6 +13,8 @@
     align-items: center;
     width: 100%;
     height: $s-header-height;
+    padding-top: 0;
+    padding-bottom: 0;
     z-index: 9999;
   }
 }
@@ -36,24 +38,25 @@
 
 .nav-list__item {
   display: inline-block;
+  padding-right: 1rem;
 
-  // &:last-of-type .nav-list__link {
-  //   padding-right: 0;
-  // }
+  &:last-of-type {
+    padding-right: 0;
+  }
+
+  @media (min-width: 1200px) {
+    padding-right: 1rem;
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
 }
 
 .nav-list__link {
-  padding: 0 0.5rem;
   text-decoration: none;
   font-family: $f-mono;
   font-weight: $f-weight-mono-regular;
-
-  @media (min-width: 600px) {
-    padding: 0 1rem;
-  }
-  // @media (min-width: 900px) {
-  //   padding: 0 2rem;
-  // }
 
   &:hover,
   &:hover:visited {
