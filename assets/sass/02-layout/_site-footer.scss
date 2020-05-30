@@ -39,9 +39,11 @@
 
   .social-nav__item {
     display: block;
+    margin-bottom: 1rem;
 
     @media (min-width: 600px) {
       display: inline-block;
+      margin-bottom: 0;
       margin-left: 1rem;
     }
   }

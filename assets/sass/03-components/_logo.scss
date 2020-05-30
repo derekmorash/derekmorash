@@ -2,11 +2,16 @@
 h1.logo {
   align-self: center;
   margin: 0;
+  margin-top: 1rem;
   padding-right: 1rem;
   line-height: 1;
   font-size: 1rem;
   font-family: $f-mono;
   font-weight: $f-weight-mono-regular;
+
+  @media (min-width: 1200px) {
+    margin-top: 0;
+  }
 
   // span:first-of-type {
   //   display: block;
