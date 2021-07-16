@@ -15,7 +15,8 @@
 <meta property="og:locale" content="en_ca">
 <meta property="og:title" content="{{ .Page.Title }}" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="{{ resources.Get "images/512.png" }}" />
+{{ $ogimage := resources.Get "images/512.png" }}
+<meta property="og:image" content="{{ $ogimage.Permalink }}" />
 {{ if (isset .Params "description") }}
 <meta property="og:description" content="{{ index .Params "description" }}" />
 {{ else }}
