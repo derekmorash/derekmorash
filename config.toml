@@ -7,3 +7,6 @@ assetDir = 'assets'
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 summaryLength = 20
+[imaging]
+  hint = 'drawing'
+  quality = 75

@@ -9,7 +9,6 @@
     
   {{ with .Get "link"}}<a href="{{.}}">{{ end }}
 
-    <!-- { { $src := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) }} -->
     {{ $src_match := (print "**/" (.Get "src") ".*") }}
     {{ $src := .Page.Resources.Match $src_match }}
     {{ $img_scratch := newScratch }}
