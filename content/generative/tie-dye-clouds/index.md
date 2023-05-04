@@ -2,7 +2,7 @@
 title = "Tie Dye Clouds"
 categories = ["Sketch"]
 description = "Distorted vector field of tie dye colours."
-featured_image = "images/swirl-9.webp"
+featured_image = "images/swirl-9.png"
 date = '2019-10-09'
 draft = false
 +++

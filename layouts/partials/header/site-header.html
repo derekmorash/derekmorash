@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 
 <head>
   {{ partial "head/meta.html" . }}
 
-  {{ partial "head/head-scripts.html" . }}
   {{ partial "head/critical-css.html" . }}
 
   {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
@@ -18,9 +17,9 @@
     <div class="site-header__inner">
 
       {{if not .IsHome}}
-      <p class="logo"><a href="/"><span>Derek</span> <span>Morash</span></a></p>
+      <p class="logo"><a href="/">Derek Morash</a></p>
       {{else}}
-      <h1 class="logo"><a href="/"><span>Derek</span> <span>Morash</span></a></h1>
+      <h1 class="logo"><a href="/">Derek Morash</a></h1>
       {{end}}
 
       <nav role="navigation" id="site-navigation" class="site-header__nav">

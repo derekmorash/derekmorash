@@ -29,6 +29,7 @@ html {
 
 body {
   font-family: $f-primary-fallback;
+  font-family: $f-primary;
   font-weight: $f-weight-primary-regular;
   font-size: 1rem;
   font-style: normal;
@@ -81,6 +82,7 @@ h6 {
   line-height: 1.125;
   // letter-spacing: -0.03em;
   color: $c-heading;
+  font-weight: $f-weight-primary-regular;
 
   .ibm-plex-sans-loaded & {
     font-weight: $f-weight-primary-regular;
@@ -127,6 +129,7 @@ img {
 pre,
 code {
   font-family: $f-mono-fallback;
+  font-family: $f-mono;
   font-weight: $f-weight-mono-regular;
 
   .ibm-plex-mono-loaded & {

@@ -39,11 +39,13 @@
 .nav-list {
   @include no-list;
   display: flex;
+  align-items: center;
 }
 
 .nav-list__item {
   display: inline-block;
   padding-right: 1rem;
+  margin-bottom: 0;
 
   &:last-of-type {
     padding-right: 0;
