@@ -27,7 +27,7 @@ tags: ["Shopify", "Rails", "Redis", "Sidekiq", "Docker"]
 
 ## 1. Create a new rails app using postgres as the database 
 
-```
+```console
 rails new app_name -d postgresql
 ```
 
@@ -37,7 +37,7 @@ Be sure to change `app_name` to your apps name.
 1. Add `.env` to `.gitignore`
 2. Create `.env.template` with the following:
    
-    ```
+    ```MD
     COMPOSE_PROJECT_NAME=app_name
 
     RAILS_ENV=development
@@ -72,7 +72,7 @@ Be sure to change `app_name` to your apps name.
 
 4. Create _.dockerignore_ with the following:
    
-    ```
+    ```docker
     .byebug_history
     .dockerignore
     .git
@@ -82,7 +82,7 @@ Be sure to change `app_name` to your apps name.
 
 5. Create _Dockerfile_ with the following:
 
-    ```
+    ```docker
     FROM ruby:2.5.1-alpine
 
     RUN apk update && apk add build-base nodejs postgresql-dev
@@ -95,7 +95,7 @@ Be sure to change `app_name` to your apps name.
 
     COPY . .
 
-    LABEL maintainer="Able Sense <support@ablesense.com>"
+    LABEL maintainer="Derek Morash <derek.morash@gmail.com>"
 
     CMD puma -C config/puma.rb
     ```
@@ -175,7 +175,7 @@ Be sure to change `app_name` to your apps name.
 
     In your terminal run:
     
-    ```
+    ```console
     ngrok http -subdomain=my-app 3000
     ```
 
@@ -183,7 +183,7 @@ Be sure to change `app_name` to your apps name.
 
     In your terminal run:
     
-    ```
+    ```console
     ngrok http 3000
     ```
 
@@ -193,7 +193,7 @@ Now that ngrok is listening on port 3000 it will list some info. Look for the fo
 
 ## 4. Create a new app in the Shopify partners dashboard
 
-Log into your Shopify Partners dashboard to create a new app. Click here to [become a shopify partner](https://www.shopify.ca/partners?ref=ablesense) if you aren't already signed up.
+Log into your Shopify Partners dashboard to create a new app. Click here to [become a shopify partner](https://www.shopify.ca/partners) if you aren't already signed up.
 
 Find the apps link in the dashboard on the left then click create app. You'll get a popup like this.
 
@@ -299,25 +299,25 @@ There are just a few things left to do to turn our Rails app into a Shopify app.
 
 1. Generate shopify app. Since we're using environment variables for the app api key and secret we don't want to use the optional arguments for that command.
     
-    ```
+    ```console
     docker-compose exec web rails generate shopify_app:install
     ```
 
 2.  Create the shop table, model, and controller
     
-    ```
+    ```console
     docker-compose exec web rails generate shopify_app:shop_model
     ```
 
 3. Run the migrations to create the shop table in the database
     
-    ```
+    ```console
     docker-compose exec web rails db:migrate
     ```
 
 4.  Generate resources to create a basic page that installed users will see. This page is just an example use of the Shopify API to print out a few products from the store and list the webhooks set up for this app.
 
-    ```
+    ```console
     docker-compose exec web rails generate shopify_app:home_controller
     ```
 
@@ -339,22 +339,22 @@ With ngrok running and all containers up you should be able to open the ngrok fo
 
 - Tail rails logs 
 
-    ```
+    ```console
     docker-compose exec web tail -f log/development.log
     ```
 
 - Rails commands
   
-    ```
+    ```console
     docker-compose exec web rails db:migrate
     ```
 
-    ```
+    ```console
     docker-compose exec web rails console
     ```
 
 - Access postgres from the command line
     
-    ```
+    ```console
     docker-compose exec postgres psql -U app_name_development
     ```

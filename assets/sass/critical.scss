@@ -59,7 +59,6 @@ strong {
 
 a {
   color: $c-text;
-  // text-decoration: none;
   text-decoration: underline;
   text-decoration-skip: objects;
   text-decoration-color: $c-link;
@@ -68,7 +67,6 @@ a {
   &:hover,
   &:hover:visited {
     color: $c-primary;
-    // text-decoration: none;
     transition: color 0.1s;
   }
 }
@@ -94,15 +92,15 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
-}
-
-h3 {
   font-size: 1.5rem;
 }
 
-h4 {
+h3 {
   font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1.125rem;
 }
 
 h5 {
@@ -156,6 +154,28 @@ label {
 
 input {
   font-size: 1rem;
+}
+
+ul,
+ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+li p {
+  margin: 0;
+
+  & + * {
+    margin-top: 1rem;
+  }
+}
+
+li ul,
+li ol {
+  margin: 0.5rem 0 1rem;
 }
 
 .skip-to-content {

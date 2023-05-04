@@ -2,14 +2,14 @@
   @extend %site-padding;
 
 
-  @media (min-width: 1200px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 1.5rem;
-  }
-  @media (min-width: 1400px) {
-    column-gap: 2rem;
-  }
+  // @media (min-width: 1200px) {
+  //   display: grid;
+  //   grid-template-columns: 1fr 1fr 1fr 1fr;
+  //   column-gap: 1.5rem;
+  // }
+  // @media (min-width: 1400px) {
+  //   column-gap: 2rem;
+  // }
 
   small {
     display: block;
@@ -50,8 +50,8 @@
 }
 
 .site-footer__inner {
-  grid-column: span 4;
-  padding-bottom: 1rem;
+  // grid-column: span 4;
+  padding: 1rem 0;
   text-align: center;
 
   @media (min-width: 600px) {

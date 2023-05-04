@@ -1,25 +1,25 @@
 {{ partial "header/site-header.html" . }}
  
 <main id="site-main" class="site-main">
-  <article role="main" class="blog-post">
-    <header class="blog-post__header">
-      <aside class="blog-post__metadata">
+  <article role="main" class="post">
+    <header class="post__header">
+      <aside class="post__metadata">
         {{/*  {{ if .Params.categories }}
-          <p class="blog-post__categories">
+          <p class="post__categories">
             {{ range .Params.categories }}
               {{ . }}
             {{ end }}
           </p>
         {{ end }}  */}}
   
-        <p class="blog-post__categories blog-post__categories--{{ .Type | urlize }}">{{ .Type }}</p>
-        <p class="blog-post__date"><span class="screen-reader-only">Posted on </span><time datetime="{{ .PublishDate.Format "2006-01-02" }}">{{ .PublishDate.Format "January 2, 2006" }}</time></p>
+        <p class="post__categories post__categories--{{ .Type | urlize }}">{{ .Type }}</p>
+        <p class="post__date"><span class="screen-reader-only">Posted on </span><time datetime="{{ .PublishDate.Format "2006-01-02" }}">{{ .PublishDate.Format "January 2, 2006" }}</time></p>
       </aside>
 
-      <h1 class="blog-post__title">{{ .Page.Title }}</h1>
+      <h1 class="post__title">{{ .Page.Title }}</h1>
     </header>
 
-    <section class="blog-post__content rte">
+    <section class="post__content rte">
       <!-- {{ .TableOfContents }} -->
       {{ .Content }}
     </section>

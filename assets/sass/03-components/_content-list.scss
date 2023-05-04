@@ -1,4 +1,4 @@
-.blog {
+.content {
   @extend %site-padding;
   // margin-top: 1.5rem;
   margin-bottom: 4.5rem;
@@ -13,19 +13,35 @@
   }
 }
 
-.blog-intro {
+.content-intro {
   @extend .page-header;
 }
 
-.blog-intro__summary {
+.content-intro__summary {
   @extend .page-header__summary;
 }
 
-.blog-intro__title {
+.content-intro__title {
   @extend .page-header__title;
 }
 
-.blog-list {
+.content-list__header {
+  margin: 0 auto;
+  padding: 1rem 0;
+  border-top: solid 2px $c-grey-100;
+}
+
+.content-list__title {
+  margin: 1rem 0;
+  font-size: 1.25rem;
+  line-height: 1.1;
+
+  @media (min-width: 900px) {
+    font-size: 1.5rem;
+  }
+}
+
+.content-list {
   @include no-list;
   display: grid;
   grid-template-columns: 1fr;
@@ -57,7 +73,7 @@
   }
 }
 
-.blog-list__item {
+.content-list__item {
   display: inline-block;
   width: 100%;
   max-width: 350px;
@@ -68,7 +84,7 @@
   }
 }
 
-.blog-list__item-link {
+.content-list__item-link {
   display: block;
   text-decoration: none;
   text-align: left;
@@ -78,23 +94,23 @@
   &:hover:visited {
     // color: $c-primary;
 
-    .blog-list__item-image {
+    .content-list__item-image {
       opacity: 0.6;
     }
 
-    .blog-list__item-categories,
-    .blog-list__item-title,
-    .blog-list__item-summary {
+    .content-list__item-categories,
+    .content-list__item-title,
+    .content-list__item-summary {
       color: $c-primary;
 
-      .blog-list__item--generative & {
+      .content-list__item--generative & {
         color: $c-secondary;
       }
     }
   }
 }
 
-.blog-list__item-categories {
+.content-list__item-categories {
   margin: 0.5rem 0;
   color: $c-primary;
   font-size: 0.65rem;
@@ -103,12 +119,12 @@
   text-transform: uppercase;
   transition: color 0.2s;
 
-  .blog-list__item--generative & {
+  .content-list__item--generative & {
     color: $c-secondary;
   }
 }
 
-.blog-list__item-figure {
+.content-list__item-figure {
   position: relative;
   display: block;
   width: 100%;
@@ -118,12 +134,12 @@
   padding-bottom: 140%;
   background-color: $c-primary;
 
-  .blog-list__item--generative & {
+  .content-list__item--generative & {
     background-color: $c-secondary;
   }
 }
 
-.blog-list__item-image {
+.content-list__item-image {
   position: absolute;
   top: 0;
   right: 0;
@@ -136,7 +152,7 @@
   transition: opacity 0.2s;
 }
 
-.blog-list__item-title {
+.content-list__item-title {
   margin: 0.5rem 0;
   color: $c-text;
   font-size: 1.25rem;
@@ -148,7 +164,7 @@
   }
 }
 
-.blog-list__item-summary {
+.content-list__item-summary {
   margin: 0;
   color: $c-text;
   transition: color 0.2s;

@@ -92,23 +92,6 @@
 }
 
 .page__content {
-  max-width: 36rem;
+  max-width: 56rem;
   margin: 0 auto;
-}
-
-
-.blog-list__header {
-  margin: 0 auto;
-  padding: 1rem 0;
-  border-top: solid 2px $c-grey-100;
-}
-
-.blog-list__title {
-  margin: 1rem 0;
-  font-size: 1.25rem;
-  line-height: 1.1;
-
-  @media (min-width: 900px) {
-    font-size: 1.5rem;
-  }
 }
