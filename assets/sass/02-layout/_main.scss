@@ -1,8 +1,7 @@
 .site-main {
-  max-width: none;
-  padding: 0;
+  @extend %site-padding;
+  @extend %site-width;
 }
-
 
 .page-header {
   padding-top: 5rem;
@@ -70,9 +69,4 @@
   // time {
   //   display: block;
   // }
-}
-
-.page__content {
-  max-width: 56rem;
-  margin: 0 auto;
 }

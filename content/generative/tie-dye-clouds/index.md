@@ -23,8 +23,3 @@ Here's a series of outputs showing my progress to get from a basic noise field t
 {{< img src="swirl-6" alt="Tie Dye Clouds generative graphics" >}}
 
 {{< img src="swirl-8" alt="Tie Dye Clouds generative graphics" >}}
-
-asdf
-
-![images/swirl-22.png](images/swirl-22.png)
-![images/swirl-22.webp](images/swirl-22.webp)

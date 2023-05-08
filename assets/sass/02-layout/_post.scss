@@ -7,10 +7,7 @@
 }
 
 .post__header {
-  @extend %site-padding;
   @extend .page-header;
-  max-width: 56rem;
-  margin: 0 auto;
 }
 
 .post__summary {
@@ -51,8 +48,6 @@
 }
 
 .post__content {
-  @extend %site-padding;
-  @extend .page__content;
   // display: grid;
   // grid-template-columns: repeat(12, 1fr);
 

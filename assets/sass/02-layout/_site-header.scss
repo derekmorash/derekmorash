@@ -1,5 +1,4 @@
 .site-header {
-  @extend %site-padding;
   padding-top: 0.5rem;
   padding-bottom: 0.25rem;
   background-color: $c-background;
@@ -20,11 +19,12 @@
 }
 
 .site-header__inner {
+  @extend %site-padding;
+  @extend %site-width;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   margin: auto;
 }
 

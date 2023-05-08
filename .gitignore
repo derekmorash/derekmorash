@@ -2,6 +2,9 @@
 public/
 # resources/
 
+.env
+node_modules/
+
 ## OS Files
 # Windows
 Thumbs.db
@@ -11,3 +14,5 @@ $RECYCLE.BIN/
 
 # OSX
 .DS_Store
+# Local Netlify folder
+.netlify

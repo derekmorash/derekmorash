@@ -1,5 +1,6 @@
 .site-footer {
   @extend %site-padding;
+  @extend %site-width;
 
 
   // @media (min-width: 1200px) {

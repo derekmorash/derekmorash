@@ -54,8 +54,14 @@
   @include button();
 }
 
+%site-width {
+  width: 100%;
+  max-width: $s-max-width;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 %site-padding {
-  max-width: none;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
   
