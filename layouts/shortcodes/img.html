@@ -4,8 +4,19 @@
 {{ $title := .Get "title" }}
 {{ $attr := .Get "attr" }}
 {{ $attrlink := .Get "attrlink" }}
+{{ $class := .Get "class" }}
+{{ $fullwidth := .Get "fullwidth" }}
+{{ $figureclass := "figure" }}
 
-<figure {{ with .Get "class" }}class="{{.}}"{{ end }}>
+{{ if isset .Params "fullwidth" }}
+  {{ if (eq $fullwidth "true")}}
+    {{ $figureclass = "figure figure--full-width" }}
+  {{ end }}
+{{ else }}
+  {{ $figureclass = "figure figure--full-width" }}
+{{ end }}
+
+<figure class="{{ $figureclass }} {{ $class }}">
     
   {{ with .Get "link"}}<a href="{{.}}">{{ end }}
 

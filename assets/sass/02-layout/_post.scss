@@ -67,8 +67,9 @@
   //   }
   // }
 
-  > figure,
-  > .highlight {
+  > .figure--full-width,
+  > .highlight,
+  > .codepen {
     max-width: 100%;
     // grid-column: 1 / span 12;
   }

@@ -1,0 +1,10 @@
+{{ with .Get "slug"}}
+<div class="codepen">
+  <p class="codepen" data-height="500" data-default-tab="result" data-slug-hash="{{.}}" data-preview="true" data-user="derekmorash" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+    <span>See the Pen <a href="https://codepen.io/derekmorash/pen/{{.}}">
+    Line clamp toggle animation</a> by Derek Morash (<a href="https://codepen.io/derekmorash">@derekmorash</a>)
+    on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
+  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+</div>
+{{ end }}
