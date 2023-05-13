@@ -20,17 +20,6 @@
               </p>
             {{ end }}
 
-            {{/*  <figure class="content-list__item-figure">
-
-              {{ $featured_image := resources.Get "images/blog-placeholder.jpg" }}
-
-              {{ if isset .Params "featured_image" }}
-                {{ .Scratch.Set "thumbnailImage"  (.Params.featured_image | absURL) }}
-                <img src="{{ .Scratch.Get "thumbnailImage" }}" alt="{{ .Title }}" class="content-list__item-image">
-              {{ end }}
-
-            </figure>  */}}
-
             <h2 class="content-list__item-title">{{ .Title }}</h2>
             <p class="content-list__item-summary">
               {{ if .Description }}
